@@ -6,9 +6,9 @@
 class Users
 {
     /**
-     * @return mixed
+     * @return array
      */
-    public function getArray()
+    public function getArray(): array
     {
         $info = file_get_contents('./users.json');
         $users = json_decode($info, true);
@@ -18,7 +18,7 @@ class Users
     /**
      * @return array
      */
-    public function getEmails():array
+    public function getEmails(): array
     {
         $array = $this->getArray();
 
@@ -36,9 +36,9 @@ class Users
 
     /**
      * @param string $email
-     * @return mixed
+     * @return array
      */
-    public function getInfo(string $email):array
+    public function getInfo(string $email): array
     {
         $array = $this->getArray();
 
