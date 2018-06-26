@@ -55,3 +55,5 @@ class Users
     }
 
 }
+/*$user=new Users();
+print_r($user->getInfo("rickM@gmail.com"));*/
