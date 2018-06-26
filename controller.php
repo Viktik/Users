@@ -7,9 +7,11 @@ if (empty($argv[1])) {
     exit;
 }
 
+$command = trim(strtolower($argv[1]));
+
 $user = new Users();
 
-if (trim(strtolower($argv[1])) == 'user') {
+if ($command == 'user') {
     $email = trim($argv[2]);
     $userInfo = $user->getInfo($email);
     foreach ($userInfo as $key => $value) {
@@ -17,9 +19,9 @@ if (trim(strtolower($argv[1])) == 'user') {
     }
 }
 
-if (trim(strtolower($argv[1])) == 'emails'){
+if (trim(strtolower($argv[1])) == 'emails') {
     $emails = $user->getEmails();
-    foreach ($emails as $email){
+    foreach ($emails as $email) {
         echo "$email\n";
     }
 }
