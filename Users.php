@@ -51,10 +51,13 @@ class Users
                 }
             }
         }
+        if (empty($info)){
+            $info = [];
+        }
         return $info;
     }
 
 }
 
 /*$user = new Users();
-print_r($user->getInfo("bob@gmail.com"));*/
+print_r($user->getInfo("rickM@gmail.com8"));*/
