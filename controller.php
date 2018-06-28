@@ -8,7 +8,6 @@ if (empty($argv[1])) {
 }
 
 $command = trim(strtolower($argv[1]));
-
 $commands = ['user', 'emails'];
 
 if (!in_array($command, $commands)) {
