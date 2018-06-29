@@ -1,6 +1,6 @@
 <?php
 
-require 'Users.php';
+require '../Users.php';
 
 class getInfoTest extends PHPUnit\Framework\TestCase
 {

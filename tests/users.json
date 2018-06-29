@@ -1,7 +1,0 @@
-{
-  "users":[
-    {"name":"Bob", "phone":"+365847255631", "email":"bob@gmail.com"},
-    {"name":"Bill", "phone":"+488514752445", "email":"bill@yahoo.com"},
-    {"name":"Rick", "phone":"+133524788514", "email":"rickM@gmail.com"}
-  ]
-}
