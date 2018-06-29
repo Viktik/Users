@@ -1,6 +1,6 @@
 <?php
 
-include 'Users.php';
+include 'User.php';
 
 if (empty($argv[1])) {
     echo "Empty statement given";
