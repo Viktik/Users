@@ -9,6 +9,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings" executionDataType="PHAR" phpInterpreterId="887c49c9-8de5-4847-b191-cc47368eeed6" synchronizationState="DONT_SYNCHRONIZE">
+    <pharPath>C:\OSPanel\modules\php\PHP-7.2-x64\composer.phar</pharPath>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
@@ -21,11 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,8 +67,10 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/controller.php" />
         <option value="$PROJECT_DIR$/tests/getEmailsTest.php" />
-        <option value="$PROJECT_DIR$/tests/getInfoTest.php" />
         <option value="$PROJECT_DIR$/Users.php" />
+        <option value="$PROJECT_DIR$/User.php" />
+        <option value="$PROJECT_DIR$/tests/getInfoTest.php" />
+        <option value="$PROJECT_DIR$/tests/UserTest.php" />
       </list>
     </option>
   </component>
@@ -106,14 +121,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
     <property name="SearchEverywhereHistoryKey" value="Edit&#9;ACTION&#9;editRunConfigurations&#10;edit &#9;ACTION&#9;editRunConfigurations" />
   </component>
   <component name="RunDashboard">
@@ -128,9 +143,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHPUnit.getInfoTest">
+  <component name="RunManager" selected="PHPUnit.UserTest">
     <configuration name="UnitTests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner directory="$PROJECT_DIR$/tests" />
+    </configuration>
+    <configuration name="UserTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="UserTest" file="$PROJECT_DIR$/tests/UserTest.php" scope="Class" />
     </configuration>
     <configuration name="getEmailsTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="getEmailsTest" file="$PROJECT_DIR$/tests/getEmailsTest.php" scope="Class" />
@@ -140,19 +158,21 @@
     </configuration>
     <configuration name="User.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/User.php" />
     <configuration name="test.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/test.php" />
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="PHPUnit.UnitTests" />
       <item index="1" class="java.lang.String" itemvalue="PHP Script.User.php" />
       <item index="2" class="java.lang.String" itemvalue="PHP Script.test.php" />
       <item index="3" class="java.lang.String" itemvalue="PHPUnit.getEmailsTest" />
       <item index="4" class="java.lang.String" itemvalue="PHPUnit.getInfoTest" />
+      <item index="5" class="java.lang.String" itemvalue="PHPUnit.UserTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.getInfoTest" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.getEmailsTest" />
-        <item index="2" class="java.lang.String" itemvalue="PHP Script.User.php" />
-        <item index="3" class="java.lang.String" itemvalue="PHP Script.test.php" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.UserTest" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.getInfoTest" />
+        <item index="2" class="java.lang.String" itemvalue="PHPUnit.getEmailsTest" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.User.php" />
+        <item index="4" class="java.lang.String" itemvalue="PHP Script.test.php" />
       </list>
     </recent_temporary>
   </component>
@@ -180,16 +200,18 @@
       <workItem from="1530269112408" duration="2785000" />
       <workItem from="1530272747397" duration="219000" />
       <workItem from="1530272980453" duration="60000" />
-      <workItem from="1530274077512" duration="262000" />
+      <workItem from="1530274077512" duration="878000" />
+      <workItem from="1530281429832" duration="8000" />
+      <workItem from="1530376754076" duration="1930000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="getEmailsTest - 2018.06.29 at 14h 47m 39s.xml">
-      <configuration name="getEmailsTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest - 2018.06.30 at 19h 50m 01s.xml">
+      <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="getInfoTest - 2018.06.29 at 09h 23m 22s.xml">
-      <configuration name="getInfoTest" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest - 2018.06.30 at 19h 51m 58s.xml">
+      <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
     <history-entry file="getInfoTest - 2018.06.29 at 09h 23m 24s.xml">
       <configuration name="getInfoTest" configurationId="PHPUnitRunConfigurationType" />
@@ -217,12 +239,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39138000" />
+    <option name="totallyTimeSpent" value="41692000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22653721" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23381877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -255,6 +277,54 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="68" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -347,7 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -363,7 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -387,7 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="68" lean-forward="false" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -395,7 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -419,7 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="96" lean-forward="false" selection-start-line="22" selection-start-column="96" selection-end-line="22" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -533,22 +598,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Users.php" />
-    <entry file="file://$PROJECT_DIR$/tests/getEmailsTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/getInfoTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -565,10 +614,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/getInfoTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/getEmailsTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
