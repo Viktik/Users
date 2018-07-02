@@ -1,10 +1,19 @@
 <?php
 
 /**
- * Class Users
+ * Class User
  */
-class Users
+class User
 {
+    /**
+     * @return mysqli
+     */
+    public function connect()
+    {
+        $link = mysqli_connect('localhost', 'root', '', 'users') or die(mysqli_connect_error());
+        return $link;
+    }
+
     /**
      * @return array
      */
@@ -51,13 +60,46 @@ class Users
                 }
             }
         }
-        if (empty($info)){
+        if (empty($info)) {
             $info = [];
         }
         return $info;
     }
 
+    /**
+     * @return array|bool
+     */
+    public function getEmailsSQL()
+    {
+        $link = $this->connect();
+        $sql = 'SELECT email FROM users';
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        $emails = mysqli_fetch_all($result, MYSQLI_NUM);
+        return $emails;
+    }
+
+    public function getInfoSQL($email)
+    {
+        $link = $this->connect();
+        $email = mysqli_real_escape_string($link,$email);
+        $sql= "SELECT name, phone, email
+                FROM users
+                WHERE email = '$email'";
+        $result = mysqli_query($link,$sql);
+        if (!$result){
+            return false;
+        }
+        $info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $info;
+    }
+
 }
 
-/*$user = new Users();
+/*$user = new User();
 print_r($user->getInfo('rickM@gmail.com'));*/
+
+/*$user = new User();
+print_r($user->getInfoSQL('rickM@gmail.com'));*/
