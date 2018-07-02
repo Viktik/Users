@@ -81,6 +81,11 @@ class User
         return $emails;
     }
 
+    /**
+     * @param $email
+     * @return array|bool
+     *
+     */
     public function getInfoSQL($email)
     {
         $link = $this->connect();

@@ -8,7 +8,7 @@ class UserTest extends PHPUnit\Framework\TestCase
 
     protected function setUp()
     {
-        $this->users = new Users();
+        $this->users = new User();
     }
 
     protected function tearDown()
