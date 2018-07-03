@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'UserTest' => $baseDir . '/tests/UserTest.php',
-    'User\\User' => $baseDir . '/User.php',
+    'IUser\\IUser' => $baseDir . '/classes/IUser.php',
+    'UserJson\\UserJson' => $baseDir . '/classes/UserJson.php',
+    'UserSQL\\UserSQL' => $baseDir . '/classes/UserSQL.php',
+    'User\\User' => $baseDir . '/classes/User.php',
 );

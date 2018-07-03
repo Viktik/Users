@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/vendor/autoload.php";
 
+use IUser\IUser, UserJson\UserJson, UserSQL\UserSQL;
+
 //include './User.php';
 
-use User\User;
+//use User\User;
 
 if (empty($argv[1])) {
     echo "Empty statement given";
@@ -18,25 +20,29 @@ if (!in_array($command, $commands)) {
     exit;
 }
 
-$user = new User();
+//$user = new User();
 
 if ($command == 'user') {
     if (empty($argv[2])) {
         echo "Email was not given";
         exit;
     }
+    $user = new UserJson();
     $email = trim($argv[2]);
     $userInfo = $user->getInfo($email);
     if (empty($userInfo)) {
         echo "Wrong email given";
         exit;
     }
-    foreach ($userInfo as $key => $value) {
+    echo " name - $user->name\n phone - $user->phone\n email - $user->email";
+
+    /*foreach ($userInfo as $key => $value) {
         echo "$key - $value\n";
-    }
+    }*/
 }
 
 if ($command == 'emails') {
+    $user = new UserJson();
     $emails = $user->getEmails();
     foreach ($emails as $email) {
         echo "$email\n";
@@ -44,7 +50,8 @@ if ($command == 'emails') {
 }
 
 if ($command == 'emailssql') {
-    $emails = $user->getEmailsSQL();
+    $user = new UserSQL();
+    $emails = $user->getEmails();
     foreach ($emails as $email) {
         echo "$email\n";
     }
@@ -55,13 +62,16 @@ if ($command == 'usersql') {
         echo "Email was not given";
         exit;
     }
+    $user = new UserSQL();
     $email = trim($argv[2]);
-    $userInfo = $user->getInfoSQL($email);
+    $userInfo = $user->getInfo($email);
     if (empty($userInfo)) {
         echo "Wrong email given";
         exit;
     }
-    foreach ($userInfo as $key => $value) {
+    echo " name - $user->name\n phone - $user->phone\n email - $user->email";
+
+    /*foreach ($userInfo as $key => $value) {
         echo "$key - $value\n";
-    }
+    }*/
 }
