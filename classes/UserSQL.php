@@ -53,7 +53,7 @@ class UserSQL implements IUser
         $email = mysqli_real_escape_string($link, $email);
         $sql = "SELECT name, phone, email
                 FROM users
-                WHERE email = $email";
+                WHERE email = '$email'";
         $result = mysqli_query($link, $sql);
         if (!$result) {
             return false;

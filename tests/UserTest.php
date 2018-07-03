@@ -33,7 +33,7 @@ class UserTest extends PHPUnit\Framework\TestCase
         $string = 'rickM@gmail.com';
         $result = $this->users->getInfo($string);
         //$this->assertEquals(['name' => 'Rick', 'phone' => '+133524788514', 'email' => 'rickM@gmail.com'], $result);
-        $this->assertEquals(true,$result);
+        $this->assertEquals(true, $result);
     }
 
     public function testGetEmailsSQL()
@@ -49,7 +49,7 @@ class UserTest extends PHPUnit\Framework\TestCase
         $string = 'rickM@gmail.com';
         $result = $this->users->getInfo($string);
         //$this->assertEquals(['name' => 'Rick', 'phone' => '+133524788514', 'email' => 'rickM@gmail.com'], $result);
-        $this->assertEquals(true,$result);
+        $this->assertEquals(true, $result);
 
     }
 }
