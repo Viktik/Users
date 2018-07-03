@@ -1,12 +1,14 @@
 <?php
 
+namespace User;
+
 /**
  * Class User
  */
 class User
 {
     /**
-     * @return mysqli
+     * @return \mysqli
      */
     public function connect()
     {
@@ -114,7 +116,7 @@ class User
 }
 
 /*$user = new User();
-print_r($user->getInfoSQL('bill@yahoo.com'));*/
+print_r($user->getInfo('bill@yahoo.com'));*/
 
 /*$user = new User();
 print_r($user->getEmailsSQL());*/

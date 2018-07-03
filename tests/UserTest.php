@@ -1,6 +1,10 @@
 <?php
 
-require '../User.php';
+require_once "../vendor/autoload.php";
+
+use User\User;
+
+//require '../User.php';
 
 class UserTest extends PHPUnit\Framework\TestCase
 {

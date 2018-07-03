@@ -1,6 +1,9 @@
 <?php
+require_once __DIR__ . "/vendor/autoload.php";
 
-include 'User.php';
+//include './User.php';
+
+use User\User;
 
 if (empty($argv[1])) {
     echo "Empty statement given";
@@ -58,7 +61,7 @@ if ($command == 'usersql') {
         echo "Wrong email given";
         exit;
     }
-    foreach ($userInfo as $key=>$value) {
+    foreach ($userInfo as $key => $value) {
         echo "$key - $value\n";
     }
 }
