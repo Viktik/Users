@@ -1,6 +1,6 @@
 <?php
 
-namespace IUser;
+namespace classes\IUser;
 
 interface IUser
 {

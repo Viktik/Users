@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
-use IUser\IUser, UserJson\UserJson, UserSQL\UserSQL;
+use classes\IUser\IUser,classes\UserJson\UserJson, classes\UserSQL\UserSQL;
 
 //include './User.php';
 

@@ -6,8 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'IUser\\IUser' => $baseDir . '/classes/IUser.php',
-    'UserJson\\UserJson' => $baseDir . '/classes/UserJson.php',
-    'UserSQL\\UserSQL' => $baseDir . '/classes/UserSQL.php',
-    'User\\User' => $baseDir . '/classes/User.php',
+    'classes\\IUser\\IUser' => $baseDir . '/classes/IUser.php',
+    'classes\\UserJson\\UserJson' => $baseDir . '/classes/UserJson.php',
+    'classes\\UserSQL\\UserSQL' => $baseDir . '/classes/UserSQL.php',
+    'classes\\User\\User' => $baseDir . '/classes/User.php',
 );

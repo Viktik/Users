@@ -4,23 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd6837de75a0fabfc9ee8ec8c78b84da1
+class ComposerStaticInit8b5094e0dcd9713b87ecb958303fc01a
 {
-    public static $files = array (
-        '2747cfdebf0325f024b781e029ded8e5' => __DIR__ . '/../..' . '/users.json',
-    );
-
     public static $classMap = array (
-        'IUser\\IUser' => __DIR__ . '/../..' . '/classes/IUser.php',
-        'UserJson\\UserJson' => __DIR__ . '/../..' . '/classes/UserJson.php',
-        'UserSQL\\UserSQL' => __DIR__ . '/../..' . '/classes/UserSQL.php',
-        'User\\User' => __DIR__ . '/../..' . '/classes/User.php',
+        'classes\\IUser\\IUser' => __DIR__ . '/../..' . '/classes/IUser.php',
+        'classes\\UserJson\\UserJson' => __DIR__ . '/../..' . '/classes/UserJson.php',
+        'classes\\UserSQL\\UserSQL' => __DIR__ . '/../..' . '/classes/UserSQL.php',
+        'classes\\User\\User' => __DIR__ . '/../..' . '/classes/User.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitd6837de75a0fabfc9ee8ec8c78b84da1::$classMap;
+            $loader->classMap = ComposerStaticInit8b5094e0dcd9713b87ecb958303fc01a::$classMap;
 
         }, null, ClassLoader::class);
     }

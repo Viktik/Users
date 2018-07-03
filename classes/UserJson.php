@@ -1,8 +1,8 @@
 <?php
 
-namespace UserJson;
+namespace classes\UserJson;
 
-use IUser\IUser;
+use classes\IUser\IUser;
 
 
 class UserJson implements IUser
@@ -14,7 +14,7 @@ class UserJson implements IUser
      */
     private function getArray(): array
     {
-        $info = file_get_contents('users.json');
+        $info = file_get_contents('../users.json');
         $users = json_decode($info, true);
         return $users;
     }
