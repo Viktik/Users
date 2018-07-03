@@ -77,7 +77,12 @@ class User
         if (!$result) {
             return false;
         }
-        $emails = mysqli_fetch_all($result, MYSQLI_NUM);
+        $emailsarr = mysqli_fetch_all($result, MYSQLI_NUM);
+        foreach ($emailsarr as $user) {
+            foreach ($user as $email) {
+                $emails[] = $email;
+            }
+        }
         return $emails;
     }
 
@@ -89,22 +94,27 @@ class User
     public function getInfoSQL($email)
     {
         $link = $this->connect();
-        $email = mysqli_real_escape_string($link,$email);
-        $sql= "SELECT name, phone, email
+        $email = mysqli_real_escape_string($link, $email);
+        $sql = "SELECT name, phone, email
                 FROM users
                 WHERE email = '$email'";
-        $result = mysqli_query($link,$sql);
-        if (!$result){
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
             return false;
         }
         $info = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        return $info;
+        foreach ($info as $item) {
+            foreach ($item as $key => $value) {
+                $userInfo[$key] = $value;
+            }
+        }
+        return $userInfo;
     }
 
 }
 
 /*$user = new User();
-print_r($user->getInfo('rickM@gmail.com'));*/
+print_r($user->getInfoSQL('bill@yahoo.com'));*/
 
 /*$user = new User();
-print_r($user->getInfoSQL('rickM@gmail.com'));*/
+print_r($user->getEmailsSQL());*/

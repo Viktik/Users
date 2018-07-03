@@ -29,4 +29,16 @@ class UserTest extends PHPUnit\Framework\TestCase
         $this->assertEquals(['name' => 'Rick', 'phone' => '+133524788514', 'email' => 'rickM@gmail.com'], $result);
     }
 
+    public function testGetEmailsSQL()
+    {
+        $result = $this->users->getEmailsSQL();
+        $this->assertEquals(['0' => 'bob@gmail.com', '1' => 'bill@yahoo.com', '2' => 'rickM@gmail.com'], $result);
+    }
+
+    public function testGetInfoSQL()
+    {
+        $string = 'rickM@gmail.com';
+        $result = $this->users->getInfoSQL($string);
+        $this->assertEquals(['name' => 'Rick', 'phone' => '+133524788514', 'email' => 'rickM@gmail.com'], $result);
+    }
 }

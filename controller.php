@@ -42,10 +42,8 @@ if ($command == 'emails') {
 
 if ($command == 'emailssql') {
     $emails = $user->getEmailsSQL();
-    foreach ($emails as $user) {
-        foreach ($user as $email) {
-            echo "$email\n";
-        }
+    foreach ($emails as $email) {
+        echo "$email\n";
     }
 }
 
@@ -60,9 +58,7 @@ if ($command == 'usersql') {
         echo "Wrong email given";
         exit;
     }
-    foreach ($userInfo as $item) {
-        foreach ($item as $key => $value) {
-            echo "$key - $value\n";
-        }
+    foreach ($userInfo as $key=>$value) {
+        echo "$key - $value\n";
     }
 }
