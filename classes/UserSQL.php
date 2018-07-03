@@ -14,7 +14,7 @@ class UserSQL implements IUser
      */
     public function connect()
     {
-        $link = mysqli_connect('localhost', 'root', '', 'users') or die(mysqli_connect_error());
+        $link = mysqli_connect('localhost', 'root', '', 'users');
         if (!$link) {
             echo "Connection failed";
             exit;
@@ -53,7 +53,7 @@ class UserSQL implements IUser
         $email = mysqli_real_escape_string($link, $email);
         $sql = "SELECT name, phone, email
                 FROM users
-                WHERE email = '$email'";
+                WHERE email = $email";
         $result = mysqli_query($link, $sql);
         if (!$result) {
             return false;
