@@ -24,56 +24,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/IUser.php">
+      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/user/controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+            <state relative-caret-position="17">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserJson.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/UserJson.php">
+      <file leaf-file-name="UserJson.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserSQL.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classes/UserSQL.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="136">
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -100,12 +82,14 @@
         <option value="$PROJECT_DIR$/classes/IUser.php" />
         <option value="$PROJECT_DIR$/classes/User.php" />
         <option value="$PROJECT_DIR$/controller.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/classes/UserJson.php" />
         <option value="$PROJECT_DIR$/controller/controller.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/classes/UserSQL.php" />
         <option value="$PROJECT_DIR$/tests/UserTest.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/controllers/user/controller.php" />
+        <option value="$PROJECT_DIR$/models/user/UserJson.php" />
       </list>
     </option>
   </component>
@@ -118,7 +102,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="633" />
     <option name="width" value="654" />
@@ -136,6 +124,28 @@
             <path>
               <item name="Users" type="b2602c69:ProjectViewProjectNode" />
               <item name="Users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Users" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -234,50 +244,50 @@
       <workItem from="1530532261358" duration="5393000" />
       <workItem from="1530598033254" duration="15893000" />
       <workItem from="1530617664362" duration="3198000" />
-      <workItem from="1530690358881" duration="257000" />
+      <workItem from="1530690358881" duration="1591000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserTest_testGetInfoSQL - 2018.07.03 at 17h 00m 26s.xml">
-      <configuration name="UserTest.testGetInfoSQL" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest - 2018.07.04 at 10h 46m 47s.xml">
+      <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGetInfoSQL - 2018.07.03 at 17h 00m 35s.xml">
-      <configuration name="UserTest.testGetInfoSQL" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest - 2018.07.04 at 10h 52m 23s.xml">
+      <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UnitTests - 2018.07.03 at 17h 00m 40s.xml">
-      <configuration name="UnitTests" configurationId="PHPUnitRunConfigurationType" />
+    <history-entry file="UserTest - 2018.07.04 at 11h 11m 51s.xml">
+      <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGetEmails - 2018.07.03 at 17h 02m 03s.xml">
+    <history-entry file="UserTest - 2018.07.04 at 11h 13m 30s.xml">
+      <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="UserTest_testGetEmails - 2018.07.04 at 11h 13m 47s.xml">
       <configuration name="UserTest.testGetEmails" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGetInfo - 2018.07.03 at 17h 02m 06s.xml">
+    <history-entry file="UserTest_testGetInfo - 2018.07.04 at 11h 13m 49s.xml">
       <configuration name="UserTest.testGetInfo" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGetEmailsSQL - 2018.07.03 at 17h 02m 09s.xml">
+    <history-entry file="UserTest_testGetEmailsSQL - 2018.07.04 at 11h 13m 53s.xml">
       <configuration name="UserTest.testGetEmailsSQL" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UserTest_testGetInfoSQL - 2018.07.03 at 17h 02m 12s.xml">
+    <history-entry file="UserTest_testGetInfoSQL - 2018.07.04 at 11h 13m 55s.xml">
       <configuration name="UserTest.testGetInfoSQL" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UnitTests - 2018.07.03 at 17h 02m 49s.xml">
+    <history-entry file="UnitTests - 2018.07.04 at 11h 15m 28s.xml">
       <configuration name="UnitTests" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="UnitTests - 2018.07.04 at 10h 46m 27s.xml">
-      <configuration name="UnitTests" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="UserTest - 2018.07.04 at 10h 46m 47s.xml">
+    <history-entry file="UserTest - 2018.07.04 at 11h 19m 36s.xml">
       <configuration name="UserTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66433000" />
+    <option name="totallyTimeSpent" value="67767000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23352855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23352855" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32913387" />
@@ -307,38 +317,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="68" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classes/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="952">
@@ -524,7 +506,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/UserJson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="221">
           <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
         </state>
       </provider>
@@ -536,13 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -550,27 +525,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
+    <entry file="file://$PROJECT_DIR$/composer1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="119">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/classes/UserSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
+        <state relative-caret-position="935">
           <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/UserTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/user/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
         </state>
       </provider>
     </entry>

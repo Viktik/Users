@@ -3,7 +3,7 @@
   "require": {},
   "autoload": {
     "classmap": [
-      "classes"
+      "models/user"
     ],
     "files": [
     ]
