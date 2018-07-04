@@ -1,4 +1,6 @@
 {
+  "name": "jarvis/users",
+  "require": {},
   "autoload": {
     "classmap": [
       "classes"
