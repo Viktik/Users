@@ -18,8 +18,8 @@
       <file leaf-file-name="users.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="29" />
+            <state>
+              <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="30" column="23" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="23" />
+              <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -45,8 +45,8 @@
       <file leaf-file-name="UserSQL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user/UserSQL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="-34">
+              <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -54,8 +54,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/user/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="306">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -103,7 +103,6 @@
         <option value="$PROJECT_DIR$/Readme" />
         <option value="$PROJECT_DIR$/composer.json.php" />
         <option value="$PROJECT_DIR$/Model/User.php" />
-        <option value="$PROJECT_DIR$/users.json" />
         <option value="$PROJECT_DIR$/User.php" />
         <option value="$PROJECT_DIR$/classes/UserInterface.php" />
         <option value="$PROJECT_DIR$/classes/IUser.php" />
@@ -120,6 +119,7 @@
         <option value="$PROJECT_DIR$/models/user/IUser.php" />
         <option value="$PROJECT_DIR$/models/user/UserJson.php" />
         <option value="$PROJECT_DIR$/models/user/UserSQL.php" />
+        <option value="$PROJECT_DIR$/users.json" />
         <option value="$PROJECT_DIR$/models/user/User.php" />
       </list>
     </option>
@@ -299,10 +299,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76131000" />
+    <option name="totallyTimeSpent" value="80213000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -424,13 +424,6 @@
     <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/composer1.json" />
     <entry file="file://$PROJECT_DIR$/classes/UserSQL.php" />
-    <entry file="file://$PROJECT_DIR$/users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -491,24 +484,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
+    <entry file="file://$PROJECT_DIR$/models/user/UserSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="23" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="23" />
+        <state relative-caret-position="-34">
+          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user/UserSQL.php">
+    <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="408">
+          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="306">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
         </state>
       </provider>
     </entry>

@@ -2,30 +2,54 @@
 
 class Test
 {
-    public function connect()
+    private function getArray(): array
     {
-        $link = mysqli_connect('localhost', 'root', '', 'users');
-        if (!$link) {
-            echo "Connection failed";
-            exit;
-        }
-        return $link;
+        $info = file_get_contents('../../users.json');
+        $users = json_decode($info, true);
+        return $users;
     }
 
-    public function getEmails()
+    public function getInfo(string $email)
     {
-        $link = $this->connect();
-        $sql = 'SELECT email FROM users';
-        $result = mysqli_query($link, $sql);
-        if (!$result) {
+        $array = $this->getArray();
+
+        /*foreach ($array as $user) {
+            foreach ($user as $item) {
+                if (in_array($email, $item)) {
+                    foreach ($item as $key => $value) {
+                        $info[$key] = $value;
+                    }
+                }
+            }
+        }*/
+        $func = function ($var) use (&$func, $email) {
+            if (is_array($var)) {
+                if (!in_array($email, $var)) {
+                    return $func;
+                } else {
+                  $inform['name'] = $var['name'];
+                  $inform['phone'] = $var['phone'];
+                  $inform['email'] = $var['email'];
+                }
+            }
+            return $inform;
+
+        };
+
+        $inform = array_filter($array,$func);
+        print_r($inform);
+
+        /*if (empty($info)) {
             return false;
         }
-        $emailsarr = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        $emails = array_column($emailsarr, 'email');
-        return $emails;
+        $this->name = $info['name'];
+        $this->email = $info['email'];
+        $this->phone = $info['phone'];
+        return true;*/
     }
 
 }
 
 $user = new Test();
-print_r($user->getEmails());
+$user->getInfo('bob@gmail.com');
+
