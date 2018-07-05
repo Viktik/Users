@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserJson.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserJson.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -60,14 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="8" selection-start-column="8" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -115,11 +112,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/composer" />
-    </include_path>
-  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="633" />
     <option name="width" value="654" />
@@ -131,6 +124,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,33 +132,10 @@
               <item name="Users" type="b2602c69:ProjectViewProjectNode" />
               <item name="Users" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Users" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Users" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Users" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Users" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Users" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,10 +265,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69473000" />
+    <option name="totallyTimeSpent" value="69835000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23352855" />
@@ -334,20 +305,8 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -355,41 +314,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/tests/getEmailsTest.php" />
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/tests/getInfoTest.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" selection-start-line="61" selection-end-line="62" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/tests/getInfoTest.php" />
     <entry file="file://$PROJECT_DIR$/tests/getEmailsTest.php" />
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -398,20 +333,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/getInfoTest.php" />
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -419,20 +342,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -440,13 +351,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -454,13 +359,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -468,13 +367,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -494,36 +387,16 @@
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
     <entry file="file://$PROJECT_DIR$/composer.json" />
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes/IUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/UserJson.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/User.php" />
+    <entry file="file://$PROJECT_DIR$/classes/IUser.php" />
+    <entry file="file://$PROJECT_DIR$/classes/UserJson.php" />
+    <entry file="file://$PROJECT_DIR$/controller/controller.php" />
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -531,23 +404,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/composer1.json" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes/UserSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/UserSQL.php" />
     <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_static.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -574,8 +439,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -587,17 +452,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="127" selection-start-line="6" selection-start-column="127" selection-end-line="6" selection-end-column="127" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="170">
             <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="127" selection-start-line="6" selection-start-column="127" selection-end-line="6" selection-end-column="127" />
         </state>
       </provider>
     </entry>
