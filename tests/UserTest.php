@@ -4,8 +4,6 @@ require_once "../vendor/autoload.php";
 
 use classes\IUser\IUser, classes\UserSQL\UserSQL, classes\UserJson\UserJson;
 
-//require '../User.php';
-
 class UserTest extends PHPUnit\Framework\TestCase
 {
     private $users;

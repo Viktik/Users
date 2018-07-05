@@ -3,10 +3,6 @@ require_once "../../vendor/autoload.php";
 
 use classes\IUser\IUser,classes\UserJson\UserJson, classes\UserSQL\UserSQL;
 
-//include './User.php';
-
-//use User\User;
-
 if (empty($argv[1])) {
     echo "Empty statement given";
     exit;

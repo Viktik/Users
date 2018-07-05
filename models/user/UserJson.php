@@ -24,16 +24,9 @@ class UserJson implements IUser
      */
     public function getEmails(): array
     {
-        $array = $this->getArray();
-
-        foreach ($array as $user) {
-            foreach ($user as $item) {
-                foreach ($item as $key => $value) {
-                    if ($key == "email") {
-                        $emails[] = $value;
-                    }
-                }
-            }
+        $arr = $this->getArray();
+        foreach ($arr as $user) {
+            $emails = array_column($user, 'email');
         }
         return $emails;
     }
