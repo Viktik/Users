@@ -17,7 +17,7 @@ class Test
     public function getInfo(string $email)
     {
         $array = $this->getArray();
-        $sorting1 = function ($item) use (&$sorting, $email) {
+        $sorting = function ($item) use (&$sorting, $email) {
             if (is_array($item)) {
                 if ($item['email'] !== $email) {
                     return array_filter($item, $sorting);
@@ -25,15 +25,17 @@ class Test
                     $this->email = $item['email'];
                     $this->name = $item['name'];
                     $this->phone = $item['phone'];
+                    return true;
                 }
             }
         };
-        $sorting = function ($item, $key) use ($email) {
-            if ($item[$key] == 'email'/*['email'] === $email*/) {
-                return true;
-            }
-            return false;
-        };
+        array_filter($array, $sorting);
+        /* $sorting = function ($item, $key) use ($email) {
+             if ($item[$key] == 'email') {
+                 return true;
+             }
+             return false;
+         };*/
         /*foreach ($array as $user) {
             foreach ($user as $item) {
                 if (in_array($email, $item)) {
@@ -69,8 +71,6 @@ class Test
         return true;*/
 
 
-        $arr = array_filter($array, $sorting, ARRAY_FILTER_USE_BOTH);
-        var_dump($arr);
     }
 
 }

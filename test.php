@@ -7,14 +7,16 @@ $fruits = array("fruits" => array(
                                                 "яблоко" => "good",
                                                 "cola" => "bad")
                                 ),
-                "numbers" => array(1,
+                "numbers" => array(
+                                    1,
                                     2,
                                     3,
                                     4,
                                     5,
                                     6
                 ),
-                "holes" => array("первая",
+                "holes" => array(
+                                "первая",
                                 5 => "вторая",
                                 "третья"
                 )

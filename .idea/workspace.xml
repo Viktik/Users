@@ -24,11 +24,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserJson.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/user/controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-136">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserJson.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-317">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="418">
+              <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+              <folding>
+                <element signature="e#734#1254#0#PHP" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,9 +48,10 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="261">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
               <folding>
+                <element signature="e#767#942#0#PHP" />
                 <element signature="e#767#1050#0#PHP" />
                 <element signature="e#776#1265#0#PHP" />
                 <element signature="e#1275#1470#0#PHP" />
@@ -47,20 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/user/controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="306">
+              <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -96,9 +100,9 @@
         <option value="$PROJECT_DIR$/models/user/IUser.php" />
         <option value="$PROJECT_DIR$/models/user/UserSQL.php" />
         <option value="$PROJECT_DIR$/users.json" />
-        <option value="$PROJECT_DIR$/models/user/UserJson.php" />
-        <option value="$PROJECT_DIR$/models/user/User.php" />
         <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/models/user/User.php" />
+        <option value="$PROJECT_DIR$/models/user/UserJson.php" />
       </list>
     </option>
   </component>
@@ -178,7 +182,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.test.php">
+  <component name="RunManager" selected="PHP Script.User.php">
     <configuration name="UnitTests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner directory="$PROJECT_DIR$/tests" />
     </configuration>
@@ -203,8 +207,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHP Script.test.php" />
         <item itemvalue="PHP Script.User.php" />
+        <item itemvalue="PHP Script.test.php" />
         <item itemvalue="PHPUnit.UserTest" />
         <item itemvalue="PHPUnit.UserTest.testGetInfoSQL" />
         <item itemvalue="PHPUnit.UserTest.testGetEmailsSQL" />
@@ -239,7 +243,7 @@
       <workItem from="1530598033254" duration="15893000" />
       <workItem from="1530617664362" duration="3198000" />
       <workItem from="1530690358881" duration="3297000" />
-      <workItem from="1530856774349" duration="12312000" />
+      <workItem from="1530856774349" duration="16306000" />
     </task>
     <servers />
   </component>
@@ -276,7 +280,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92797000" />
+    <option name="totallyTimeSpent" value="96791000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -289,7 +293,7 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32949308" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25354332" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25354332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32949308" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -454,6 +458,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="41" lean-forward="true" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -463,23 +474,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/user/controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
+        <state relative-caret-position="-136">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-317">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="261">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
           <folding>
+            <element signature="e#767#942#0#PHP" />
             <element signature="e#767#1050#0#PHP" />
             <element signature="e#776#1265#0#PHP" />
             <element signature="e#1275#1470#0#PHP" />
@@ -487,10 +492,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/models/user/UserJson.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="418">
+          <caret line="76" column="20" lean-forward="true" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+          <folding>
+            <element signature="e#734#1254#0#PHP" />
+          </folding>
         </state>
       </provider>
     </entry>
