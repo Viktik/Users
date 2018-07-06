@@ -2,6 +2,10 @@
 
 class Test
 {
+    public $name;
+    public $email;
+    public $phone;
+
     private function getArray(): array
     {
         $info = file_get_contents('../../users.json');
@@ -9,9 +13,22 @@ class Test
         return $users;
     }
 
+
     public function getInfo(string $email)
     {
         $array = $this->getArray();
+        $sorting = function($item) use (&$sorting,$email)
+        {
+            if (is_array($item)){
+                if ($item['email'] !== $email){
+                    return array_filter($item,$sorting);
+                }else{
+                    $this->email = $item['email'];
+                    $this->name = $item['name'];
+                    $this->phone=$item['phone'];
+                }
+            }
+        };
 
         /*foreach ($array as $user) {
             foreach ($user as $item) {
@@ -22,7 +39,7 @@ class Test
                 }
             }
         }*/
-        $func = function ($var) use (&$func, $email) {
+        /*$func = function ($var) use (&$func, $email) {
             if (is_array($var)) {
                 if (!in_array($email, $var)) {
                     return $func;
@@ -37,7 +54,7 @@ class Test
         };
 
         $inform = array_filter($array,$func);
-        print_r($inform);
+        print_r($inform);*/
 
         /*if (empty($info)) {
             return false;
@@ -46,10 +63,14 @@ class Test
         $this->email = $info['email'];
         $this->phone = $info['phone'];
         return true;*/
+
+
+        array_filter($array, $sorting);
     }
 
 }
 
 $user = new Test();
-$user->getInfo('bob@gmail.com');
+$user->getInfo('rickM@gmail.com');
+echo "$user->phone $user->name $user->email";
 
