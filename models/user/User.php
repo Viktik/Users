@@ -70,7 +70,7 @@ class Test
 
 
         $arr = array_filter($array, $sorting, ARRAY_FILTER_USE_BOTH);
-        print_r($arr);
+        var_dump($arr);
     }
 
 }
