@@ -7,7 +7,9 @@ use classes\IUser\IUser;
 
 class UserJson implements IUser
 {
-    public $name, $email, $phone;
+    public $name;
+    public $email;
+    public $phone;
 
     /**
      * @return array

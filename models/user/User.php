@@ -17,19 +17,23 @@ class Test
     public function getInfo(string $email)
     {
         $array = $this->getArray();
-        $sorting = function($item) use (&$sorting,$email)
-        {
-            if (is_array($item)){
-                if ($item['email'] !== $email){
-                    return array_filter($item,$sorting);
-                }else{
+        $sorting1 = function ($item) use (&$sorting, $email) {
+            if (is_array($item)) {
+                if ($item['email'] !== $email) {
+                    return array_filter($item, $sorting);
+                } else {
                     $this->email = $item['email'];
                     $this->name = $item['name'];
-                    $this->phone=$item['phone'];
+                    $this->phone = $item['phone'];
                 }
             }
         };
-
+        $sorting = function ($item, $key) use ($email) {
+            if ($item[$key] == 'email'/*['email'] === $email*/) {
+                return true;
+            }
+            return false;
+        };
         /*foreach ($array as $user) {
             foreach ($user as $item) {
                 if (in_array($email, $item)) {
@@ -65,7 +69,8 @@ class Test
         return true;*/
 
 
-        array_filter($array, $sorting);
+        $arr = array_filter($array, $sorting, ARRAY_FILTER_USE_BOTH);
+        print_r($arr);
     }
 
 }
