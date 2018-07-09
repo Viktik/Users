@@ -1,59 +1,42 @@
 <?php
 
-namespace classes\User;
-
-/**
- * Class User
- */
-class User
+class Test
 {
-    /**
-     * @return \mysqli
-     */
-    public function connect()
-    {
-        $link = mysqli_connect('localhost', 'root', '', 'users') or die(mysqli_connect_error());
-        return $link;
-    }
+    public $name;
+    public $email;
+    public $phone;
 
-    /**
-     * @return array
-     */
     private function getArray(): array
     {
-        $info = file_get_contents('../users.json');
+        $info = file_get_contents('../../users.json');
         $users = json_decode($info, true);
         return $users;
     }
 
-    /**
-     * @return array
-     */
-    public function getEmails(): array
+
+    public function getInfo(string $email)
     {
         $array = $this->getArray();
-
-        foreach ($array as $user) {
-            foreach ($user as $item) {
-                foreach ($item as $key => $value) {
-                    if ($key == "email") {
-                        $emails[] = $value;
-                    }
+        $sorting = function ($item) use (&$sorting, $email) {
+            if (is_array($item)) {
+                if ($item['email'] !== $email) {
+                    return array_filter($item, $sorting);
+                } else {
+                    $this->email = $item['email'];
+                    $this->name = $item['name'];
+                    $this->phone = $item['phone'];
+                    return true;
                 }
             }
-        }
-        return $emails;
-    }
-
-    /**
-     * @param string $email
-     * @return array
-     */
-    public function getInfo(string $email): array
-    {
-        $array = $this->getArray();
-
-        foreach ($array as $user) {
+        };
+        array_filter($array, $sorting);
+        /* $sorting = function ($item, $key) use ($email) {
+             if ($item[$key] == 'email') {
+                 return true;
+             }
+             return false;
+         };*/
+        /*foreach ($array as $user) {
             foreach ($user as $item) {
                 if (in_array($email, $item)) {
                     foreach ($item as $key => $value) {
@@ -61,62 +44,38 @@ class User
                     }
                 }
             }
-        }
-        if (empty($info)) {
-            $info = [];
-        }
-        return $info;
-    }
+        }*/
+        /*$func = function ($var) use (&$func, $email) {
+            if (is_array($var)) {
+                if (!in_array($email, $var)) {
+                    return $func;
+                } else {
+                  $inform['name'] = $var['name'];
+                  $inform['phone'] = $var['phone'];
+                  $inform['email'] = $var['email'];
+                }
+            }
+            return $inform;
 
-    /**
-     * @return array|bool
-     */
-    public function getEmailsSQL()
-    {
-        $link = $this->connect();
-        $sql = 'SELECT email FROM users';
-        $result = mysqli_query($link, $sql);
-        if (!$result) {
+        };
+
+        $inform = array_filter($array,$func);
+        print_r($inform);*/
+
+        /*if (empty($info)) {
             return false;
         }
-        $emailsarr = mysqli_fetch_all($result, MYSQLI_NUM);
-        foreach ($emailsarr as $user) {
-            foreach ($user as $email) {
-                $emails[] = $email;
-            }
-        }
-        return $emails;
-    }
+        $this->name = $info['name'];
+        $this->email = $info['email'];
+        $this->phone = $info['phone'];
+        return true;*/
 
-    /**
-     * @param $email
-     * @return array|bool
-     *
-     */
-    public function getInfoSQL($email)
-    {
-        $link = $this->connect();
-        $email = mysqli_real_escape_string($link, $email);
-        $sql = "SELECT name, phone, email
-                FROM users
-                WHERE email = '$email'";
-        $result = mysqli_query($link, $sql);
-        if (!$result) {
-            return false;
-        }
-        $info = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        foreach ($info as $item) {
-            foreach ($item as $key => $value) {
-                $userInfo[$key] = $value;
-            }
-        }
-        return $userInfo;
+
     }
 
 }
 
-/*$user = new User();
-print_r($user->getInfo('bill@yahoo.com'));*/
+$user = new Test();
+$user->getInfo('rickM@gmail.com');
+echo "$user->phone $user->name $user->email";
 
-/*$user = new User();
-print_r($user->getEmailsSQL());*/

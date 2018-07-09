@@ -12,7 +12,7 @@ class UserSQL implements IUser
     /**
      * @return \mysqli
      */
-    public function connect()
+    private function connect()
     {
         $link = mysqli_connect('localhost', 'root', '', 'users');
         if (!$link) {
@@ -33,12 +33,8 @@ class UserSQL implements IUser
         if (!$result) {
             return false;
         }
-        $emailsarr = mysqli_fetch_all($result, MYSQLI_NUM);
-        foreach ($emailsarr as $user) {
-            foreach ($user as $email) {
-                $emails[] = $email;
-            }
-        }
+        $emailsarr = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $emails = array_column($emailsarr, 'email');
         return $emails;
     }
 
