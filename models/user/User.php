@@ -5,12 +5,36 @@ class Test
     public $name;
     public $email;
     public $phone;
+    public $users = [];
 
     private function getArray(): array
     {
         $info = file_get_contents('../../users.json');
         $users = json_decode($info, true);
         return $users;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getAllInfo()
+    {
+        $array = $this->getArray();
+
+        $sorting = function ($item) use (&$sorting) {
+            if (empty($item['name'])) {
+                return array_map($sorting, $item);
+            } else {
+                $this->users[] = $item;
+            }
+
+            return true;
+        };
+        array_map($sorting, $array);
+        if (empty($this->users)) {
+            return false;
+        }
+        return true;
     }
 
 
@@ -76,6 +100,6 @@ class Test
 }
 
 $user = new Test();
-$user->getInfo('rickM@gmail.com');
-echo "$user->phone $user->name $user->email";
+$user->getAllInfo();
+print_r($user->users);
 

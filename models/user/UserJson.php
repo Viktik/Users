@@ -10,6 +10,7 @@ class UserJson implements IUser
     public $name;
     public $email;
     public $phone;
+    public $users = [];
 
     /**
      * @return array
@@ -54,6 +55,29 @@ class UserJson implements IUser
         };
         array_filter($array, $sorting);
         if (empty($this->email || $this->name || $this->phone)) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getAllInfo()
+    {
+        $array = $this->getArray();
+
+        $sorting = function ($item) use (&$sorting) {
+            if (empty($item['name'])) {
+                return array_map($sorting, $item);
+            } else {
+                $this->users[] = $item;
+            }
+
+            return true;
+        };
+        array_map($sorting, $array);
+        if (empty($this->users)) {
             return false;
         }
         return true;
