@@ -55,6 +55,9 @@ class UserSQL implements IUser
             return false;
         }
         $info = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        if (empty($info)) {
+            return false;
+        }
         foreach ($info as $item) {
             foreach ($item as $key => $value) {
                 $userInfo[$key] = $value;

@@ -38,7 +38,6 @@ if ($command == 'user') {
         echo "Email was not given";
         exit;
     }
-    $user = new UserJson();
     $email = trim($argv[2]);
     $userInfo = $user->getInfo($email);
     if (empty($userInfo)) {
@@ -46,24 +45,5 @@ if ($command == 'user') {
         exit;
     }
     echo " name - $user->name\n phone - $user->phone\n email - $user->email";
-
 }
 
-if ($command == 'usersql') {
-    if (empty($argv[2])) {
-        echo "Email was not given";
-        exit;
-    }
-    $user = new UserSQL();
-    $email = trim($argv[2]);
-    $userInfo = $user->getInfo($email);
-    if (empty($userInfo)) {
-        echo "Wrong email given";
-        exit;
-    }
-    echo " name - $user->name\n phone - $user->phone\n email - $user->email";
-
-    /*foreach ($userInfo as $key => $value) {
-        echo "$key - $value\n";
-    }*/
-}
