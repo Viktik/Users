@@ -16,7 +16,8 @@ class UserJson implements IUser
      */
     private function getArray(): array
     {
-        $info = file_get_contents('../../users.json');
+        //$info = file_get_contents('../../users.json');
+        $info = file_get_contents('C:\OSPanel\domains\Users\users.json');
         $users = json_decode($info, true);
         return $users;
     }
