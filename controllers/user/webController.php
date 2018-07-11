@@ -1,8 +1,9 @@
 <?php
-require_once "../../vendor/autoload.php";
-require "../../config.php";
+//require_once "../../vendor/autoload.php";
+//require "../../config.php";
 
-use classes\UserJson\UserJson, classes\UserSQL\UserSQL;
+use classes\UserJson\UserJson;
+use classes\UserSQL\UserSQL;
 
 switch ($base) {
     case 'json':
@@ -31,15 +32,17 @@ class WebController
         $this->userInfo['name'] = $this->base->name;
         $this->userInfo['phone'] = $this->base->phone;
         $this->userInfo['email'] = $this->base->email;
+        unset ($_GET['command']);
         return $this->userInfo;
     }
 
     function getAllInfo(){
         $this->base->getAllInfo();
+        unset ($_GET['command']);
         return $this->allInfo = $this->base->allInfo;
     }
 }
 
-$controller = new WebController($class);
-var_dump($controller->getAllInfo());
+/*$controller = new WebController($class);
+var_dump($controller->getAllInfo());*/
 
