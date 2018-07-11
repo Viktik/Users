@@ -7,7 +7,10 @@ use classes\IUser\IUser;
 
 class UserSQL implements IUser
 {
-    public $name, $email, $phone;
+    public $name;
+    public $email;
+    public $phone;
+    public $allInfo = [];
 
     /**
      * @return \mysqli
@@ -66,6 +69,26 @@ class UserSQL implements IUser
         $this->name = $userInfo['name'];
         $this->email = $userInfo['email'];
         $this->phone = $userInfo['phone'];
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getAllInfo()
+    {
+        $link = $this->connect();
+        $sql = "SELECT name, phone, email
+                FROM users";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        $allInfo = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        if (empty($allInfo)) {
+            return false;
+        }
+        $this->allInfo = $allInfo;
         return true;
     }
 }

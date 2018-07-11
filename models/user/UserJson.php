@@ -10,7 +10,7 @@ class UserJson implements IUser
     public $name;
     public $email;
     public $phone;
-    public $users = [];
+    public $allInfo = [];
 
     /**
      * @return array
@@ -71,13 +71,13 @@ class UserJson implements IUser
             if (empty($item['name'])) {
                 return array_map($sorting, $item);
             } else {
-                $this->users[] = $item;
+                $this->allInfo[] = $item;
             }
 
             return true;
         };
         array_map($sorting, $array);
-        if (empty($this->users)) {
+        if (empty($this->allInfo)) {
             return false;
         }
         return true;
