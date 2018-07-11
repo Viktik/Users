@@ -18,16 +18,16 @@ class WebController
 {
     public $allInfo = [];
     public $userInfo = [];
-    function __construct($class)
+    public function __construct($class)
     {
         $this->base = $class;
     }
 
-    function getEmails(){
+    /*function getEmails(){
         return $this->base->getEmails();
-    }
+    }*/
 
-    function getInfo($email){
+    public function getInfo($email){
         $this->base->getInfo($email);
         $this->userInfo['name'] = $this->base->name;
         $this->userInfo['phone'] = $this->base->phone;
@@ -36,7 +36,7 @@ class WebController
         return $this->userInfo;
     }
 
-    function getAllInfo(){
+    public function getAllInfo(){
         $this->base->getAllInfo();
         unset ($_GET['command']);
         return $this->allInfo = $this->base->allInfo;
