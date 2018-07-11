@@ -2,9 +2,6 @@
 require_once "vendor/autoload.php";
 require 'config.php';
 require 'controllers/user/webController.php';
-/*unset($_GET['command']);
-unset($_POST['email']);
-exit;*/
 ?>
 
     <!DOCTYPE html>
@@ -28,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $userInfo = $controller->getInfo($email);
         if (empty($userInfo['name'])) {
             echo "Неверно указан email!<br/>";
+            unset($_GET['command']);
         } else {
             ?>
             <table border="1" cellpadding="5" cellspacing="0" width="100%">
@@ -44,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </table>
             <a href="index.php">Назад</a>
             <?
-            exit;
+            //exit;
         }
     }
 

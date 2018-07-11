@@ -32,13 +32,13 @@ class WebController
         $this->userInfo['name'] = $this->base->name;
         $this->userInfo['phone'] = $this->base->phone;
         $this->userInfo['email'] = $this->base->email;
-        unset ($_GET['command']);
+        //unset ($_GET['command']);
         return $this->userInfo;
     }
 
     public function getAllInfo(){
         $this->base->getAllInfo();
-        unset ($_GET['command']);
+        //unset ($_GET['command']);
         return $this->allInfo = $this->base->allInfo;
     }
 }
