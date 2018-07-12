@@ -17,18 +17,11 @@ $controller = new WebController($class);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim(strip_tags($_POST['email']));
     $_GET['command'] = 'search';
+    $userInfo = $controller->getInfo($email);
 
-    if (empty($email)) {
-        echo "Укажите email!";
-        unset($_GET['command']);
-    } else {
-        $userInfo = $controller->getInfo($email);
-        if (empty($userInfo['name'])) {
-            echo "Неверно указан email!<br/>";
-            unset($_GET['command']);
-        } else {
-            ?>
-            <table border="1" cellpadding="5" cellspacing="0" width="100%">
+    if (!empty($email) && !empty($userInfo['name'])) {
+        ?>
+        <table border="1" cellpadding="5" cellspacing="0" width="100%">
             <tr>
                 <th>Name</th>
                 <th>Phone</th>
@@ -39,13 +32,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <td><?= $userInfo['phone'] ?></td>
                 <td><?= $userInfo['email'] ?></td>
             </tr>
-            </table>
-            <a href="index.php">Назад</a>
-            <?
-            //exit;
-        }
+        </table>
+        <a href="index.php">Назад</a>
+        <?
     }
-
+    if (empty($email)) {
+        echo "Укажите email!";
+        unset($_GET['command']);
+    }
+    if (!empty($email) && empty($userInfo['name'])) {
+        echo "Неверно указан email!";
+        unset($_GET['command']);
+    }
 }
 
 if (empty($_GET['command'])) {
