@@ -36,7 +36,7 @@
       <file leaf-file-name="webController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/user/webController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
+            <state relative-caret-position="1224">
               <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
               <folding>
                 <element signature="e#81#111#0#PHP" expanded="true" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+            <state relative-caret-position="431">
+              <caret line="69" column="60" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -58,12 +58,12 @@
         <entry file="file://$PROJECT_DIR$/newUserForm.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveUser.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="saveUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saveUser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -75,7 +75,7 @@
       <file leaf-file-name="UserSQL.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user/UserSQL.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
+            <state relative-caret-position="1853">
               <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
             </state>
           </provider>
@@ -128,8 +128,8 @@
         <option value="$PROJECT_DIR$/newUserForm.html" />
         <option value="$PROJECT_DIR$/controllers/user/webController.php" />
         <option value="$PROJECT_DIR$/models/user/UserSQL.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/saveUser.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -198,7 +198,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="Edit&#9;ACTION&#9;editRunConfigurations&#10;edit &#9;ACTION&#9;editRunConfigurations" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2second.course" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
   </component>
   <component name="RecentsManager">
@@ -281,6 +281,7 @@
       <workItem from="1531221998452" duration="10939000" />
       <workItem from="1531307364377" duration="22920000" />
       <workItem from="1531376084584" duration="14952000" />
+      <workItem from="1531402815316" duration="1160000" />
     </task>
     <servers />
   </component>
@@ -317,25 +318,24 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151438000" />
+    <option name="totallyTimeSpent" value="152600000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32913387" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32949308" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25354332" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32949308" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32949308" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23352855" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984252" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -502,13 +502,13 @@
     <entry file="file://$PROJECT_DIR$/newUserForm.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/user/webController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="1224">
           <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
           <folding>
             <element signature="e#81#111#0#PHP" expanded="true" />
@@ -518,15 +518,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/user/UserSQL.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
+        <state relative-caret-position="1853">
           <caret line="109" column="41" selection-start-line="109" selection-start-column="41" selection-end-line="109" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="5" lean-forward="true" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        <state relative-caret-position="431">
+          <caret line="69" column="60" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
         </state>
       </provider>
     </entry>

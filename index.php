@@ -58,6 +58,7 @@ if ($_GET['command'] == 'allinfo') {
         <th>Name</th>
         <th>Phone</th>
         <th>Email</th>
+        <th>Action</th>
     </tr>
 <?
     foreach ($allInfo as $user) {
@@ -66,6 +67,7 @@ if ($_GET['command'] == 'allinfo') {
             <td><?= $user['name']?></td>
             <td><?= $user['phone']?></td>
             <td><?= $user['email']?></td>
+            <td><a href="">Изменить</a> / <a href="">Удалить</a> </td>
         </tr>
         <?
     }
