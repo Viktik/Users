@@ -18,6 +18,11 @@ class WebController
 {
     public $allInfo = [];
     public $userInfo = [];
+
+    /**
+     * WebController constructor.
+     * @param $class
+     */
     public function __construct($class)
     {
         $this->base = $class;
@@ -27,19 +32,46 @@ class WebController
         return $this->base->getEmails();
     }*/
 
-    public function getInfo($email){
+    /**
+     * @param $email
+     * @return array
+     */
+    public function getInfo($email)
+    {
         $this->base->getInfo($email);
         $this->userInfo['name'] = $this->base->name;
         $this->userInfo['phone'] = $this->base->phone;
         $this->userInfo['email'] = $this->base->email;
-        //unset ($_GET['command']);
         return $this->userInfo;
     }
 
-    public function getAllInfo(){
+    /**
+     * @return mixed
+     */
+    public function getAllInfo()
+    {
         $this->base->getAllInfo();
-        //unset ($_GET['command']);
         return $this->allInfo = $this->base->allInfo;
+    }
+
+    /**
+     * @param $string
+     * @return string
+     */
+    public function clearStr($string)
+    {
+        return $str = trim(strip_tags($string));;
+    }
+
+    /**
+     * @param $name
+     * @param $phone
+     * @param $email
+     * @return bool
+     */
+    public function addNewUser($name, $phone, $email): bool
+    {
+        return $this->base->addNewUser($name, $phone, $email);
     }
 }
 
