@@ -1,5 +1,5 @@
 <?php
-
+/*
 $fruits = array("fruits" => array(
                                 "a" => "апельсин",
                                 "b" => "банан",
@@ -30,4 +30,10 @@ $sorting = function ($item, $key) {
 $arr = array_filter($fruits, $sorting, ARRAY_FILTER_USE_BOTH);
 print_r($arr);
 
-
+*/
+/*$email = 'fred.info@gmail.com';
+$link = mysqli_connect('localhost', 'root', '', 'users');
+$sql = "DELETE FROM users
+                WHERE email = '$email'";
+$result = mysqli_query($link, $sql);
+var_dump($result);*/

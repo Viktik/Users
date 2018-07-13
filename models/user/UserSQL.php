@@ -112,6 +112,22 @@ class UserSQL implements IUser
         mysqli_stmt_close($stmt);
         return true;
     }
+
+    /**
+     * @param $email
+     * @return bool
+     */
+    public function deleteUser($email)
+    {
+        $link = $this->connect();
+        $sql = "DELETE FROM users
+                WHERE email = '$email'";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        return true;
+    }
 }
 
 /*$user = new UserSQL();
