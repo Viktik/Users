@@ -67,7 +67,7 @@ if ($_GET['command'] == 'allinfo') {
             <td><?= $user['name']?></td>
             <td><?= $user['phone']?></td>
             <td><?= $user['email']?></td>
-            <td><a href="">Изменить</a> / <a href="actions/deleteUser.php?email=<?=$user['email']?>">Удалить</a> </td>
+            <td><a href="htmlForms/updateUser.php?email=<?=$user['email']?>">Изменить</a> / <a href="actions/deleteUser.php?email=<?=$user['email']?>">Удалить</a> </td>
         </tr>
         <?
     }

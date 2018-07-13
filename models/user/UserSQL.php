@@ -128,6 +128,26 @@ class UserSQL implements IUser
         }
         return true;
     }
+
+    /**
+     * @param $oldEmail
+     * @param $name
+     * @param $phone
+     * @param $email
+     * @return bool
+     */
+    public function updateUser($oldEmail, $name, $phone, $email)
+    {
+        $link = $this->connect();
+        $sql = "UPDATE users
+                SET name = '$name', phone = '$phone', email = '$email'
+                WHERE email = '$oldEmail'";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        return true;
+    }
 }
 
 /*$user = new UserSQL();
