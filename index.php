@@ -85,5 +85,4 @@ if ($_GET['command'] == 'allinfo') {
         <br/>
         <input type="submit" value="Искать"/>
         <p></p>
-
-<?
+        
