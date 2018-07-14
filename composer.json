@@ -6,6 +6,7 @@
       "models/user"
     ],
     "files": [
+      "config.php"
     ]
   }
 }
