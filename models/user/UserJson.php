@@ -16,7 +16,6 @@ class UserJson implements IUser
      */
     private function getArray(): array
     {
-        //$info = file_get_contents('../../users.json');
         $info = file_get_contents('C:\OSPanel\domains\Users\users.json');
         $users = json_decode($info, true);
         return $users;
@@ -40,24 +39,6 @@ class UserJson implements IUser
      */
     public function getInfo(string $email)
     {
-        /*$array = $this->getArray();
-
-        foreach ($array as $user) {
-            foreach ($user as $item) {
-                if (in_array($email, $item)) {
-                    foreach ($item as $key => $value) {
-                        $info[$key] = $value;
-                    }
-                }
-            }
-        }
-        if (empty($info)) {
-            return false;
-        }
-        $this->name = $info['name'];
-        $this->email = $info['email'];
-        $this->phone = $info['phone'];
-        return true;*/
         $array = $this->getArray();
         $sorting = function ($item) use (&$sorting, $email) {
             if (is_array($item)) {
@@ -72,7 +53,7 @@ class UserJson implements IUser
             return true;
         };
         array_filter($array, $sorting);
-        if (empty($this->email||$this->name||$this->phone)){
+        if (empty($this->email || $this->name || $this->phone)) {
             return false;
         }
         return true;
