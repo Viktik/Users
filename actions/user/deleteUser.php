@@ -9,9 +9,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email = $_POST['email'];
         $controller = new WebController($class);
         $result = $controller->deleteUser($email);
-        if (!$result){
+        if (!$result) {
             echo "Удаление не удалось";
-        }else{
+        } else {
             echo "Пользователь удален!<br/>";
         }
         ?>
@@ -20,22 +20,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 }
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Check Delete User</title>
-</head>
-<body>
-<h2>Вы уверены, что хотите удалить пользователя?</h2>
-<form action="deleteUser.php" method="post">
-    <input type='hidden' name='email' value='<?=$_GET['email'];?>'>
-    <input type="radio" name="agree" value="no" checked> Нет
-    <input type="radio" name="agree" value="yes"> Да
-    <p><input type="submit" value="Выполнить"/>
-</form>
-</body>
-</html>
