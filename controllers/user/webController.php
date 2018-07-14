@@ -2,7 +2,7 @@
 //require_once "../../vendor/autoload.php";
 //require "../../config.php";
 
-use classes\UserJson\UserJson;
+/*use classes\UserJson\UserJson;
 use classes\UserSQL\UserSQL;
 
 switch ($base) {
@@ -12,7 +12,7 @@ switch ($base) {
     case 'sql':
         $class = new UserSql();
         break;
-}
+}*/
 
 class WebController
 {

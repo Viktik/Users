@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Редактирование пользователя</h1>
-<form action="../actions/updateUser.php" method="post">
+<form action="../actions/user/updateUser.php" method="post">
     <input type='hidden' name='oldEmail' value='<?=$_GET['email'];?>'>
     <p>Новое Имя: <input type="text" name="name" size="50"/>
     <p>Новый Телефон: <input type="text" name="phone"

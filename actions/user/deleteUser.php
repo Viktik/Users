@@ -1,7 +1,7 @@
 <?php
-require_once "../vendor/autoload.php";
-require '../config.php';
-require '../controllers/user/webController.php';
+require_once "../../vendor/autoload.php";
+require '../../config.php';
+require '../../controllers/user/webController.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['agree'] == 'no') {
@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "Пользователь удален!<br/>";
         }
         ?>
-        <a href="../index.php">Вернуться к списку</a>
+        <a href="../../index.php">Вернуться к списку</a>
         <?
         exit;
     }
