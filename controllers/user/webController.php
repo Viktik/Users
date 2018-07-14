@@ -73,6 +73,27 @@ class WebController
     {
         return $this->base->addNewUser($name, $phone, $email);
     }
+
+    /**
+     * @param $email
+     * @return bool
+     */
+    public function deleteUser($email)
+    {
+        return $this->base->deleteUser($email);
+    }
+
+    /**
+     * @param $oldEmail
+     * @param $name
+     * @param $phone
+     * @param $email
+     * @return bool
+     */
+    public function updateUser($oldEmail, $name, $phone, $email)
+    {
+        return $this->base->updateUser($oldEmail, $name, $phone, $email);
+    }
 }
 
 /*$controller = new WebController($class);

@@ -58,6 +58,7 @@ if ($_GET['command'] == 'allinfo') {
         <th>Name</th>
         <th>Phone</th>
         <th>Email</th>
+        <th>Action</th>
     </tr>
 <?
     foreach ($allInfo as $user) {
@@ -66,13 +67,14 @@ if ($_GET['command'] == 'allinfo') {
             <td><?= $user['name']?></td>
             <td><?= $user['phone']?></td>
             <td><?= $user['email']?></td>
+            <td><a href="htmlForms/updateUser.php?email=<?=$user['email']?>">Изменить</a> / <a href="actions/deleteUser.php?email=<?=$user['email']?>">Удалить</a> </td>
         </tr>
         <?
     }
     ?>
 </table>
     <br/>
-    <a href="newUserForm.html">Создать нового пользователя</a>
+    <a href="htmlForms/newUserForm.html">Создать нового пользователя</a>
     <?
 }
 ?>
@@ -84,4 +86,3 @@ if ($_GET['command'] == 'allinfo') {
         <input type="submit" value="Искать"/>
         <p></p>
 
-<?
