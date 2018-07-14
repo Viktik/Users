@@ -71,6 +71,8 @@ if ($_GET['command'] == 'allinfo') {
     }
     ?>
 </table>
+    <br/>
+    <a href="newUserForm.html">Создать нового пользователя</a>
     <?
 }
 ?>
