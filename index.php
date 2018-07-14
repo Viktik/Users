@@ -1,5 +1,4 @@
 <?php
-require_once "vendor/autoload.php";
 require 'config.php';
 require 'controllers/user/webController.php';
 ?>

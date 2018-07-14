@@ -1,11 +1,10 @@
 <?php
-require_once "../../vendor/autoload.php";
 require '../../config.php';
 require '../../controllers/user/webController.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['agree'] == 'no') {
-        header("Location: ../index.php");
+        header("Location: ../../index.php");
     } elseif ($_POST['agree'] == 'yes') {
         $email = $_POST['email'];
         $controller = new WebController($class);
