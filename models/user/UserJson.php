@@ -26,10 +26,6 @@ class UserJson implements IUser
         return $emails;
     }
 
-    /**
-     * @param string $email
-     * @return bool
-     */
     public function getInfo(string $email): bool
     {
         $users = $this->getArray();
