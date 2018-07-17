@@ -1,8 +1,8 @@
 <?php
 
-namespace classes\UserJson;
+namespace models\user\UserJson;
 
-use classes\IUser\IUser;
+use models\user\IUser\IUser;
 
 
 class UserJson implements IUser

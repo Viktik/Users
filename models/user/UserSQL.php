@@ -1,8 +1,8 @@
 <?php
 
-namespace classes\UserSQL;
+namespace models\user\UserSQL;
 
-use classes\IUser\IUser;
+use models\user\IUser\IUser;
 
 
 class UserSQL implements IUser

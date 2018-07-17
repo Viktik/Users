@@ -1,9 +1,9 @@
 <?php
 require_once "vendor/autoload.php";
 
-use classes\IUser\IUser;
-use classes\UserJson\UserJson;
-use classes\UserSQL\UserSQL;
+use models\user\IUser\IUser;
+use models\user\UserJson\UserJson;
+use models\user\UserSQL\UserSQL;
 
 $base = "sql";
 
