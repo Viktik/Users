@@ -30,14 +30,15 @@ class UserJson implements IUser
     {
         $users = $this->getArray();
         $sorting = function ($item) use ($email) {
-            if ($item['email'] === $email){
+            if ($item['email'] === $email) {
                 return true;
             }
         };
         $user = array_filter($users, $sorting);
-        $this->name = $user[0]['name'];
-        $this->phone = $user[0]['phone'];
-        $this->email = $user[0]['email'];
+        $userV = $user[0];
+        $this->name = $userV['name'];
+        $this->phone = $userV['phone'];
+        $this->email = $userV['email'];
         if (empty($this->email || $this->name || $this->phone)) {
             return false;
         }

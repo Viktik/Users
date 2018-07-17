@@ -44,12 +44,12 @@ class WebController
 
     public function deleteUser(string $email): bool
     {
-        return $this->base->deleteUser($email);
+        return $this->base->delete($email);
     }
 
     public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
     {
-        return $this->base->updateUser($oldEmail, $name, $phone, $email);
+        return $this->base->update($oldEmail, $name, $phone, $email);
     }
 }
 
