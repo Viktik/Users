@@ -1,8 +1,8 @@
 <?php
 
-namespace classes\UserJson;
+namespace models\user\UserJson;
 
-use classes\IUser\IUser;
+use models\user\IUser\IUser;
 
 
 class UserJson implements IUser
@@ -12,9 +12,6 @@ class UserJson implements IUser
     public $phone;
     public $allInfo = [];
 
-    /**
-     * @return array
-     */
     private function getArray(): array
     {
         $info = file_get_contents('C:\OSPanel\domains\Users\users.json');
@@ -22,44 +19,26 @@ class UserJson implements IUser
         return $users;
     }
 
-    /**
-     * @return array
-     */
     public function getEmails(): array
     {
         $arr = $this->getArray();
-        foreach ($arr as $user) {
-            $emails = array_column($user, 'email');
-        }
+        $emails = array_column($arr, 'email');
         return $emails;
     }
 
-    /**
-     * @param string $email
-     * @return bool
-     */
-    public function getInfo(string $email)
+    public function getInfo(string $email): bool
     {
         $users = $this->getArray();
         $sorting = function ($item) use ($email) {
-            /*if (is_array($item)) {
-                if ($item['email'] !== $email) {
-                    return array_filter($item, $sorting);
-                } else {
-                    $this->email = $item['email'];
-                    $this->name = $item['name'];
-                    $this->phone = $item['phone'];
-                }
-            }
-            return true;*/
-            if ($item['email'] === $email){
+            if ($item['email'] === $email) {
                 return true;
             }
         };
         $user = array_filter($users, $sorting);
-        $this->name = $user[0]['name'];
-        $this->phone = $user[1]['phone'];
-        $this->email = $user[2]['email'];
+        $userV = $user[0];
+        $this->name = $userV['name'];
+        $this->phone = $userV['phone'];
+        $this->email = $userV['email'];
         if (empty($this->email || $this->name || $this->phone)) {
             return false;
         }
@@ -73,16 +52,12 @@ class UserJson implements IUser
     {
         $array = $this->getArray();
 
-        $sorting = function ($item) use (&$sorting) {
-            if (empty($item['name'])) {
-                return array_map($sorting, $item);
-            } else {
-                $this->allInfo[] = $item;
+        $sorting = function ($item) {
+            if (!empty($item['name'])){
+                return true;
             }
-
-            return true;
         };
-        array_map($sorting, $array);
+        $this->allInfo = array_filter($array, $sorting);
         if (empty($this->allInfo)) {
             return false;
         }

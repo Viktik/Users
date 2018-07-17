@@ -1,17 +1,5 @@
 <?php
-require_once "../../vendor/autoload.php";
 require "../../config.php";
-
-use classes\IUser\IUser, classes\UserJson\UserJson, classes\UserSQL\UserSQL;
-
-switch ($base) {
-    case 'json':
-        $user = new UserJson();
-        break;
-    case 'sql':
-        $user = new UserSQL();
-        break;
-}
 
 if (empty($argv[1])) {
     echo "Empty statement given";
@@ -27,7 +15,7 @@ if (!in_array($command, $commands)) {
 }
 
 if ($command == 'emails') {
-    $emails = $user->getEmails();
+    $emails = $class->getEmails();
     foreach ($emails as $email) {
         echo "$email\n";
     }
@@ -39,11 +27,11 @@ if ($command == 'user') {
         exit;
     }
     $email = trim($argv[2]);
-    $userInfo = $user->getInfo($email);
+    $userInfo = $class->getInfo($email);
     if (empty($userInfo)) {
         echo "Wrong email given";
         exit;
     }
-    echo " name - $user->name\n phone - $user->phone\n email - $user->email";
+    echo " name - $class->name\n phone - $class->phone\n email - $class->email";
 }
 

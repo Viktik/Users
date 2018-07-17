@@ -1,18 +1,4 @@
 <?php
-//require_once "../../vendor/autoload.php";
-//require "../../config.php";
-
-use classes\UserJson\UserJson;
-use classes\UserSQL\UserSQL;
-
-switch ($base) {
-    case 'json':
-        $class = new UserJson();
-        break;
-    case 'sql':
-        $class = new UserSql();
-        break;
-}
 
 class WebController
 {
@@ -28,15 +14,7 @@ class WebController
         $this->base = $class;
     }
 
-    /*function getEmails(){
-        return $this->base->getEmails();
-    }*/
-
-    /**
-     * @param $email
-     * @return array
-     */
-    public function getInfo($email)
+    public function getInfo(string $email): array
     {
         $this->base->getInfo($email);
         $this->userInfo['name'] = $this->base->name;
@@ -54,45 +32,24 @@ class WebController
         return $this->allInfo = $this->base->allInfo;
     }
 
-    /**
-     * @param $string
-     * @return string
-     */
-    public function clearStr($string)
+    public function clearStr(string $string): string
     {
-        return $str = trim(strip_tags($string));;
+        return $str = trim(strip_tags($string));
     }
 
-    /**
-     * @param $name
-     * @param $phone
-     * @param $email
-     * @return bool
-     */
-    public function addNewUser($name, $phone, $email): bool
+    public function addNewUser(string $name, string $phone, string $email): bool
     {
         return $this->base->addNewUser($name, $phone, $email);
     }
 
-    /**
-     * @param $email
-     * @return bool
-     */
-    public function deleteUser($email)
+    public function deleteUser(string $email): bool
     {
-        return $this->base->deleteUser($email);
+        return $this->base->delete($email);
     }
 
-    /**
-     * @param $oldEmail
-     * @param $name
-     * @param $phone
-     * @param $email
-     * @return bool
-     */
-    public function updateUser($oldEmail, $name, $phone, $email)
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
     {
-        return $this->base->updateUser($oldEmail, $name, $phone, $email);
+        return $this->base->update($oldEmail, $name, $phone, $email);
     }
 }
 

@@ -3,7 +3,8 @@
   "require": {},
   "autoload": {
     "classmap": [
-      "models/user"
+      "models/user",
+      "models/posts"
     ],
     "files": [
       "config.php"

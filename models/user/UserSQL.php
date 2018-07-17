@@ -1,8 +1,8 @@
 <?php
 
-namespace classes\UserSQL;
+namespace models\user\UserSQL;
 
-use classes\IUser\IUser;
+use models\user\IUser\IUser;
 
 
 class UserSQL implements IUser
@@ -41,11 +41,7 @@ class UserSQL implements IUser
         return $emails;
     }
 
-    /**
-     * @param $email
-     * @return bool
-     *
-     */
+
     public function getInfo(string $email): bool
     {
         $link = $this->connect();
@@ -92,12 +88,6 @@ class UserSQL implements IUser
         return true;
     }
 
-    /**
-     * @param string $name
-     * @param string $phone
-     * @param string $email
-     * @return bool
-     */
     public function addNewUser(string $name, string $phone, string $email): bool
     {
         $link = $this->connect();
@@ -113,11 +103,7 @@ class UserSQL implements IUser
         return true;
     }
 
-    /**
-     * @param $email
-     * @return bool
-     */
-    public function deleteUser($email)
+    public function delete(string $email): bool
     {
         $link = $this->connect();
         $sql = "DELETE FROM users
@@ -129,14 +115,7 @@ class UserSQL implements IUser
         return true;
     }
 
-    /**
-     * @param $oldEmail
-     * @param $name
-     * @param $phone
-     * @param $email
-     * @return bool
-     */
-    public function updateUser($oldEmail, $name, $phone, $email)
+    public function update(string $oldEmail, string $name, string $phone, string $email): bool
     {
         $link = $this->connect();
         $sql = "UPDATE users
