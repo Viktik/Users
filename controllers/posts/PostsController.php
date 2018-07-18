@@ -4,6 +4,7 @@ namespace controllers\posts\PostsController;
 
 class PostsController
 {
+    public $model;
     public $allPosts = [];
 
     /**
@@ -12,33 +13,32 @@ class PostsController
      */
     function __construct(\models\posts\Posts\Posts $post)
     {
-        $this->base = $post;
+        $this->model = $post;
     }
 
     public function getAllPosts(): array
     {
-        $this->base->getAllPosts();
-        $this->allPosts = $this->base->allPosts;
-        return $this->allPosts;
+        $this->model->getAllPosts();
+        return $this->model->allPosts;
     }
 
     public function deletePost(int $id): bool
     {
-        return $this->base->deletePost($id);
+        return $this->model->deletePost($id);
     }
 
     public function getPostByID(int $id)
     {
-        return $this->base->getPostById($id);
+        return $this->model->getPostById($id);
     }
 
     public function clearStr(string $string): string
     {
-        return $str = trim(strip_tags($string));
+        return trim(strip_tags($string));
     }
 
     public function updatePost(int $id, string $title, string $description): bool
     {
-        return $this->base->updatePost($id, $title, $description);
+        return $this->model->updatePost($id, $title, $description);
     }
 }

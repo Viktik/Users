@@ -51,11 +51,8 @@ class Posts
         return true;
     }
 
-    /**
-     * @param int $id
-     * @return bool|array
-     */
-    public function getPostById(int $id)
+
+    public function getPostById(int $id): array
     {
         $link = $this->connect();
         $sql = "SELECT id, title, description
@@ -63,11 +60,11 @@ class Posts
                 WHERE id = '$id'";
         $result = mysqli_query($link, $sql);
         if (!$result) {
-            return false;
+            throw new \Exception("Failed query");
         }
         $post = mysqli_fetch_all($result, MYSQLI_ASSOC);
         if (empty($post)) {
-            return false;
+            throw new \Exception("Post was not found");
         }
         foreach ($post as $item) {
             foreach ($item as $key => $value) {
@@ -93,9 +90,4 @@ class Posts
         }
         return true;
     }
-
-
 }
-
-
-

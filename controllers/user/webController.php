@@ -4,6 +4,7 @@ namespace controllers\user\WebController;
 
 class WebController
 {
+    public $model;
     public $allInfo = [];
     public $userInfo = [];
 
@@ -13,15 +14,15 @@ class WebController
      */
     public function __construct($class)
     {
-        $this->base = $class;
+        $this->model = $class;
     }
 
     public function getInfo(string $email): array
     {
-        $this->base->getInfo($email);
-        $this->userInfo['name'] = $this->base->name;
-        $this->userInfo['phone'] = $this->base->phone;
-        $this->userInfo['email'] = $this->base->email;
+        $this->model->getInfo($email);
+        $this->userInfo['name'] = $this->model->name;
+        $this->userInfo['phone'] = $this->model->phone;
+        $this->userInfo['email'] = $this->model->email;
         return $this->userInfo;
     }
 
@@ -30,31 +31,30 @@ class WebController
      */
     public function getAllInfo()
     {
-        $this->base->getAllInfo();
-        return $this->allInfo = $this->base->allInfo;
+        $this->model->getAllInfo();
+        return $this->allInfo = $this->model->allInfo;
     }
 
     public function clearStr(string $string): string
     {
-        return $str = trim(strip_tags($string));
+        return trim(strip_tags($string));
     }
 
     public function addNewUser(string $name, string $phone, string $email): bool
     {
-        return $this->base->addNewUser($name, $phone, $email);
+        return $this->model->addNewUser($name, $phone, $email);
     }
 
     public function deleteUser(string $email): bool
     {
-        return $this->base->deleteUser($email);
+        return $this->model->deleteUser($email);
     }
 
     public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
     {
-        return $this->base->updateUser($oldEmail, $name, $phone, $email);
+        return $this->model->updateUser($oldEmail, $name, $phone, $email);
     }
 }
 
 /*$controller = new WebController($class);
 var_dump($controller->getAllInfo());*/
-
