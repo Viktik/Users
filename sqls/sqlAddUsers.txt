@@ -1,0 +1,5 @@
+INSERT INTO `users` (`name`, `phone`, `email`) 
+VALUES  ('Bob', '+365847255631', 'bob@gmail.com'), 
+	('Rick', '+133524788514', 'rickM@gmail.com'),
+	('Josh', '+128759984215', 'josh@gmail.com'), 
+	('Bill', '+380584487695', 'bill@yahoo.com')
