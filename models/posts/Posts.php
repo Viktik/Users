@@ -42,5 +42,17 @@ class Posts
         $this->allPosts = $allPosts;
         return true;
     }
+
+    public function deletePost(int $id): bool
+    {
+        $link = $this->connect();
+        $sql = "DELETE FROM posts
+                WHERE id = '$id'";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        return true;
+    }
 }
 

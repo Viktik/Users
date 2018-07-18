@@ -21,4 +21,9 @@ class PostsController
         $this->allPosts = $this->base->allPosts;
         return $this->allPosts;
     }
+
+    public function deletePost(int $id): bool
+    {
+        return $this->base->deletePost($id);
+    }
 }

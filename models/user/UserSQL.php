@@ -103,7 +103,7 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function delete(string $email): bool
+    public function deleteUser(string $email): bool
     {
         $link = $this->connect();
         $sql = "DELETE FROM users
@@ -115,7 +115,7 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function update(string $oldEmail, string $name, string $phone, string $email): bool
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
     {
         $link = $this->connect();
         $sql = "UPDATE users
