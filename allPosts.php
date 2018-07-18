@@ -18,9 +18,9 @@ $allPosts = $controller->getAllPosts();
     foreach ($allPosts as $post) {
         ?>
         <tr>
-            <td><?= $post['title']?></td>
-            <td><?= $post['description']?></td>
-            <td><a href="?id=<?=$post['id']?>">Изменить</a> / <a href="?id=<?=$post['id']?>">Удалить</a> </td>
+            <td><?= $post['title'] ?></td>
+            <td><?= $post['description'] ?></td>
+            <td><a href="?id=<?= $post['id'] ?>">Изменить</a> / <a href="?id=<?= $post['id'] ?>">Удалить</a></td>
         </tr>
         <?
     }
