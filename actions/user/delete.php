@@ -1,6 +1,6 @@
 <?php
 require '../../config.php';
-require '../../controllers/user/webController.php';
+//require '../../controllers/user/webController.php';
 
 /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['agree'] == 'no') {
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         echo "Удаление не удалось<br/>";
     } else {
         $email = $_GET['email'];
-        $controller = new WebController($class);
+        //$controller = new WebController($class);
         $result = $controller->deleteUser($email);
         if (!$result) {
             echo "Удаление не удалось<br/>";

@@ -13,7 +13,7 @@
     <p><input type="submit" value="Выполнить"/>
 </form>-->
 
-<a href="../actions/user/delete.php?email=<?= $_GET['email'];?>">Да</a>
-<a href="../index.php">Нет</a>
+<a href="../../actions/user/delete.php?email=<?= $_GET['email'];?>">Да</a>
+<a href="../../index.php">Нет</a>
 </body>
 </html>

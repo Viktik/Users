@@ -1,5 +1,7 @@
 <?php
 
+namespace controllers\user\WebController;
+
 class WebController
 {
     public $allInfo = [];

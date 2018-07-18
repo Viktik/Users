@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-require 'controllers/user/webController.php';
+//require 'controllers/user/webController.php';
 ?>
 
     <!DOCTYPE html>
@@ -11,7 +11,7 @@ require 'controllers/user/webController.php';
     </head>
     <body>
 <?php
-$controller = new WebController($class);
+//$controller = new WebController($class);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim(strip_tags($_POST['email']));
@@ -66,14 +66,14 @@ if ($_GET['command'] == 'allinfo') {
             <td><?= $user['name']?></td>
             <td><?= $user['phone']?></td>
             <td><?= $user['email']?></td>
-            <td><a href="htmlForms/updateUser.php?email=<?=$user['email']?>">Изменить</a> / <a href="htmlForms/deleteUser.php?email=<?=$user['email']?>">Удалить</a> </td>
+            <td><a href="htmlForms/user/update.php?email=<?=$user['email']?>">Изменить</a> / <a href="htmlForms/user/delete.php?email=<?=$user['email']?>">Удалить</a> </td>
         </tr>
         <?
     }
     ?>
 </table>
     <br/>
-    <a href="htmlForms/newUserForm.html">Создать нового пользователя</a>
+    <a href="htmlForms/user/newUser.html">Создать нового пользователя</a>
     <?
 }
 ?>

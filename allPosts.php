@@ -20,10 +20,11 @@ $allPosts = $controller->getAllPosts();
         <tr>
             <td><?= $post['title'] ?></td>
             <td><?= $post['description'] ?></td>
-            <td><a href="?id=<?= $post['id'] ?>">Изменить</a> / <a href="?id=<?= $post['id'] ?>">Удалить</a></td>
+            <td><a href="?id=<?= $post['id'] ?>">Изменить</a> / <a href="htmlForms/posts/delete.php?id=<?= $post['id'] ?>">Удалить</a></td>
         </tr>
         <?
     }
     ?>
 </table>
 <br/>
+<!--<a href="">Добавить новый пост</a>-->
