@@ -13,7 +13,7 @@ class PostsController
         $this->base = $post;
     }
 
-    public function getAllPosts()
+    public function getAllPosts(): array
     {
         $this->base->getAllPosts();
         $this->allPosts = $this->base->allPosts;
