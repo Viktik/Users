@@ -4,10 +4,6 @@ namespace models\posts\Posts;
 
 class Posts
 {
-    public $id;
-    public $user_id;
-    public $title;
-    public $description;
     public $allPosts = [];
 
     /**
@@ -54,5 +50,52 @@ class Posts
         }
         return true;
     }
+
+    /**
+     * @param int $id
+     * @return bool|array
+     */
+    public function getPostById(int $id)
+    {
+        $link = $this->connect();
+        $sql = "SELECT id, title, description
+                FROM posts 
+                WHERE id = '$id'";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        $post = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        if (empty($post)) {
+            return false;
+        }
+        foreach ($post as $item) {
+            foreach ($item as $key => $value) {
+                $postInfo[$key] = $value;
+            }
+        }
+        return $postInfo;
+        /*$this->id = $postInfo['id'];
+        $this->title = $postInfo['title'];
+        $this->description = $postInfo['description'];
+        return true;*/
+    }
+
+    public function updatePost(int $id, string $title, string $description): bool
+    {
+        $link = $this->connect();
+        $sql = "UPDATE posts
+                SET title = '$title', description = '$description'
+                WHERE id = '$id'";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            return false;
+        }
+        return true;
+    }
+
+
 }
+
+
 

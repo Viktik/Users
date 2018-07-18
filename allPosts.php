@@ -15,7 +15,7 @@ $allPosts = $controller->getAllPosts();
         <tr>
             <td><?= $post['title'] ?></td>
             <td><?= $post['description'] ?></td>
-            <td><a href="?id=<?= $post['id'] ?>">Изменить</a> / <a
+            <td><a href="htmlForms/posts/update.php?id=<?= $post['id'] ?>">Изменить</a> / <a
                         href="htmlForms/posts/delete.php?id=<?= $post['id'] ?>">Удалить</a></td>
         </tr>
         <?
