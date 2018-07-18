@@ -13,7 +13,7 @@ class Posts
     /**
      * @return \mysqli
      */
-    private function connect()
+    private function connect(): \mysqli
     {
         $link = mysqli_connect('localhost', 'root', '', 'users');
         if (!$link) {
