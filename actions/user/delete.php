@@ -1,6 +1,6 @@
 <?php
 require '../../config.php';
-//require '../../controllers/user/webController.php';
+//require '../../controllers/user/WebController.php';
 
 /*if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST['agree'] == 'no') {

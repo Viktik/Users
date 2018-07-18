@@ -1,5 +1,7 @@
 <?php
 
+namespace controllers\posts\PostsController;
+
 class PostsController
 {
     public $allPosts = [];

@@ -1,10 +1,9 @@
 <?php
-require 'vendor/autoload.php';
-require 'controllers/posts/PostsController.php';
+require 'postsConfig.php';
 
-use models\posts\Posts\Posts;
+//use models\posts\Posts\Posts;
 
-$controller = new PostsController(new Posts());
+//$controller = new PostsController(new Posts());
 
 $allPosts = $controller->getAllPosts();
 ?>
