@@ -32,3 +32,4 @@ if (empty($userPosts)) {
 </table>
 <br/>
 <a href="../../htmlForms/posts/newPost.php?userId=<?= $userId?>"> Добавить пост</a>
+<p><a href="../../index.php"> Вернуться к списку</a></p>
