@@ -41,4 +41,19 @@ class PostsController
     {
         return $this->model->updatePost($id, $title, $description);
     }
+
+    public function getUserPosts(int $id)
+    {
+        return $this->model->getUserPosts($id);
+    }
+
+    public function addNewPost(int $userId, string $title, string $description): bool
+    {
+        return $this->model->addNewPost($userId, $title, $description);
+    }
+
+    public function getUsersInf(): array
+    {
+        return $this->model->getUsersInf();
+    }
 }

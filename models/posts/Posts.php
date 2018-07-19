@@ -25,8 +25,10 @@ class Posts
     public function getAllPosts(): bool
     {
         $link = $this->connect();
-        $sql = "SELECT id, title, description
-                FROM posts";
+        $sql = "SELECT users.name, posts.id, posts.title, posts.description
+                FROM posts
+                JOIN users on users.id = posts.user_id
+                ORDER BY  posts.id";
         $result = mysqli_query($link, $sql);
         if (!$result) {
             return false;
@@ -89,5 +91,48 @@ class Posts
             return false;
         }
         return true;
+    }
+
+    public function getUserPosts(int $id): array
+    {
+        $link = $this->connect();
+        $sql = "SELECT users.name, posts.id, posts.title, posts.description
+                FROM posts
+                JOIN users on users.id = posts.user_id
+                WHERE posts.user_id = '$id'";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            throw new \Exception("Failed query");
+        }
+        $userPosts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $userPosts;
+    }
+
+    public function addNewPost(int $userId, string $title, string $description): bool
+    {
+        $link = $this->connect();
+        $sql = "INSERT INTO posts(user_id, title, description)
+                VALUES (?, ?, ?)";
+        $stmt = mysqli_prepare($link, $sql);
+        if ($stmt == false) {
+            return false;
+        }
+        mysqli_stmt_bind_param($stmt, "iss", $userId, $title, $description);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        return true;
+    }
+
+    public function getUsersInf(): array
+    {
+        $link = $this->connect();
+        $sql = "SELECT id, name
+                FROM users";
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            throw new \Exception("Failed query");
+        }
+        $usersInf = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        return $usersInf;
     }
 }
