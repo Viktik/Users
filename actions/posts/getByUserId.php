@@ -5,7 +5,9 @@ $userId = $_GET['id'];
 
 $userPosts = $controller->getUserPosts($userId);
 if (empty($userPosts)) {
-    echo"<h2 align='center'>У пользователя нет постов</h2>";
+    echo "<h2 align='center'>У пользователя нет постов</h2>";
+    ?><a href="../../htmlForms/posts/newPost.php?userId=<?= $userId ?>"> Добавить пост</a>
+    <?
     exit;
 }
 ?>
