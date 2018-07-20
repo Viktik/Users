@@ -40,9 +40,9 @@ class WebController
         return trim(strip_tags($string));
     }
 
-    public function addNewUser(string $name, string $phone, string $email): bool
+    public function addNewUser(string $name, string $phone, string $email, string $password): bool
     {
-        return $this->model->addNewUser($name, $phone, $email);
+        return $this->model->addNewUser($name, $phone, $email, $password);
     }
 
     public function deleteUser(string $email): bool

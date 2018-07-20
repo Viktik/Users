@@ -90,16 +90,16 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function addNewUser(string $name, string $phone, string $email): bool
+    public function addNewUser(string $name, string $phone, string $email, string $password): bool
     {
         $link = $this->connect();
-        $sql = 'INSERT INTO users( name, phone, email)
-                VALUES (?, ?, ?)';
+        $sql = 'INSERT INTO users( name, phone, email, password)
+                VALUES (?, ?, ?, ?)';
         $stmt = mysqli_prepare($link, $sql);
         if ($stmt == false) {
             return false;
         }
-        mysqli_stmt_bind_param($stmt, "sss", $name, $phone, $email);
+        mysqli_stmt_bind_param($stmt, "ssss", $name, $phone, $email, $password);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         return true;
