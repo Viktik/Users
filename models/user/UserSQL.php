@@ -117,11 +117,11 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email, string $password): bool
     {
         $link = $this->connect();
         $sql = "UPDATE users
-                SET name = '$name', phone = '$phone', email = '$email'
+                SET name = '$name', phone = '$phone', email = '$email', password = '$password'
                 WHERE email = '$oldEmail'";
         $result = mysqli_query($link, $sql);
         if (!$result) {

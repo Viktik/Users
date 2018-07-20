@@ -50,9 +50,9 @@ class WebController
         return $this->model->deleteUser($email);
     }
 
-    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email, string $password): bool
     {
-        return $this->model->updateUser($oldEmail, $name, $phone, $email);
+        return $this->model->updateUser($oldEmail, $name, $phone, $email, $password);
     }
 }
 
