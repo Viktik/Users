@@ -10,13 +10,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($userInfo = $controller->getInfo($email)) {
             if (password_verify($password, $userInfo['password'])) {
                 $_SESSION['user'] = true;
-                header("Location: showProfile.php?info=".$userInfo);
+                $info = base64_encode(serialize($userInfo));
+                header("Location: showProfile.php?info=".$info);
                 exit;
             } else {
-                echo 'Неправильное имя пользователяили пароль!';
+                echo 'Неправильный email или пароль!';
             }
         } else {
-            echo 'Неправильное имя пользователяили пароль!';
+            echo 'Неправильный email или пароль!';
         }
     } else {
         echo 'Заполните все поля формы!';

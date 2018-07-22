@@ -87,6 +87,7 @@ if ($_GET['command'] == 'allinfo') {
     <br/>
     <p class="leftstr"><a href="htmlForms/user/new.html">Создать нового пользователя</a></p>
     <p class="rightstr"><a href="allPosts.php">Список постов</a></p>
+    <p><a href="htmlForms/user/authorization.php">Авторизация</a></p>
     <?
 }
 ?>
