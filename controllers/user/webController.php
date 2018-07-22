@@ -23,6 +23,7 @@ class WebController
         $this->userInfo['name'] = $this->model->name;
         $this->userInfo['phone'] = $this->model->phone;
         $this->userInfo['email'] = $this->model->email;
+        $this->userInfo['password'] = $this->model->password;
         return $this->userInfo;
     }
 

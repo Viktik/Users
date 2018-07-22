@@ -37,3 +37,4 @@ $sql = "DELETE FROM users
                 WHERE email = '$email'";
 $result = mysqli_query($link, $sql);
 var_dump($result);*/
+

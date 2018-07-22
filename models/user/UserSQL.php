@@ -10,6 +10,7 @@ class UserSQL implements IUser
     public $name;
     public $email;
     public $phone;
+    public $password;
     public $allInfo = [];
 
     /**
@@ -46,7 +47,7 @@ class UserSQL implements IUser
     {
         $link = $this->connect();
         $email = mysqli_real_escape_string($link, $email);
-        $sql = "SELECT name, phone, email
+        $sql = "SELECT name, phone, email, password
                 FROM users
                 WHERE email = '$email'";
         $result = mysqli_query($link, $sql);
@@ -65,6 +66,7 @@ class UserSQL implements IUser
         $this->name = $userInfo['name'];
         $this->email = $userInfo['email'];
         $this->phone = $userInfo['phone'];
+        $this->password = $userInfo['password'];
         return true;
     }
 
