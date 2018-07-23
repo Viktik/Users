@@ -10,7 +10,7 @@ $email = $controller->clearStr($_POST['email']);
 
 if (empty($name) || empty($phone) || empty($email)) {
     echo "Заполните все поля формы!<br/>";
-    echo "<a href='../../htmlForms/user/newUser.html'>Вернуться к заполнению</a><br/>";
+    echo "<a href='../../htmlForms/user/new.html'>Вернуться к заполнению</a><br/>";
     echo "<a href='../../index.php'>К списку</a>";
 } else {
     if (!$controller->addNewUser($name, $phone, $email)) {
