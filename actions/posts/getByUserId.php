@@ -6,7 +6,7 @@ $userId = $_GET['id'];
 $userPosts = $controller->getUserPosts($userId);
 if (empty($userPosts)) {
     echo "<h2 align='center'>У пользователя нет постов</h2>";
-    ?><a href="../../htmlForms/posts/newPost.php?userId=<?= $userId ?>"> Добавить пост</a>
+    ?><a href="../../htmlForms/posts/new.php?userId=<?= $userId ?>"> Добавить пост</a>
     <?
     exit;
 }
@@ -33,5 +33,5 @@ if (empty($userPosts)) {
     ?>
 </table>
 <br/>
-<a href="../../htmlForms/posts/newPost.php?userId=<?= $userId?>"> Добавить пост</a>
+<a href="../../htmlForms/posts/new.php?userId=<?= $userId?>"> Добавить пост</a>
 <p><a href="../../index.php"> Вернуться к списку</a></p>

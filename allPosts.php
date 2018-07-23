@@ -25,5 +25,5 @@ $allPosts = $controller->getAllPosts();
     ?>
 </table>
 <br/>
-<a href="htmlForms/posts/newPost.php">Добавить новый пост</a>
+<a href="htmlForms/posts/new.php">Добавить новый пост</a>
 <p><a href="index.php"> Вернуться к списку пользователей</a></p>
