@@ -13,6 +13,7 @@
                              size="50"/>
     <p>Новый Email: <input type="text" name="email"
                            size="50"/>
+    <p>Новый Пароль: <input type="text" maxlength="25" name="password" size="50"/></p>
     <p><input type="submit" value="Отредактировать"/>
 </form>
 </body>

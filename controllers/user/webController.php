@@ -23,6 +23,7 @@ class WebController
         $this->userInfo['name'] = $this->model->name;
         $this->userInfo['phone'] = $this->model->phone;
         $this->userInfo['email'] = $this->model->email;
+        $this->userInfo['password'] = $this->model->password;
         return $this->userInfo;
     }
 
@@ -40,9 +41,9 @@ class WebController
         return trim(strip_tags($string));
     }
 
-    public function addNewUser(string $name, string $phone, string $email): bool
+    public function addNewUser(string $name, string $phone, string $email, string $password): bool
     {
-        return $this->model->addNewUser($name, $phone, $email);
+        return $this->model->addNewUser($name, $phone, $email, $password);
     }
 
     public function deleteUser(string $email): bool
@@ -50,9 +51,9 @@ class WebController
         return $this->model->deleteUser($email);
     }
 
-    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email, string $password): bool
     {
-        return $this->model->updateUser($oldEmail, $name, $phone, $email);
+        return $this->model->updateUser($oldEmail, $name, $phone, $email, $password);
     }
 }
 

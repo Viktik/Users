@@ -10,6 +10,7 @@ class UserSQL implements IUser
     public $name;
     public $email;
     public $phone;
+    public $password;
     public $allInfo = [];
 
     /**
@@ -46,7 +47,7 @@ class UserSQL implements IUser
     {
         $link = $this->connect();
         $email = mysqli_real_escape_string($link, $email);
-        $sql = "SELECT name, phone, email
+        $sql = "SELECT name, phone, email, password
                 FROM users
                 WHERE email = '$email'";
         $result = mysqli_query($link, $sql);
@@ -65,6 +66,7 @@ class UserSQL implements IUser
         $this->name = $userInfo['name'];
         $this->email = $userInfo['email'];
         $this->phone = $userInfo['phone'];
+        $this->password = $userInfo['password'];
         return true;
     }
 
@@ -90,16 +92,16 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function addNewUser(string $name, string $phone, string $email): bool
+    public function addNewUser(string $name, string $phone, string $email, string $password): bool
     {
         $link = $this->connect();
-        $sql = 'INSERT INTO users( name, phone, email)
-                VALUES (?, ?, ?)';
+        $sql = 'INSERT INTO users( name, phone, email, password)
+                VALUES (?, ?, ?, ?)';
         $stmt = mysqli_prepare($link, $sql);
         if ($stmt == false) {
             return false;
         }
-        mysqli_stmt_bind_param($stmt, "sss", $name, $phone, $email);
+        mysqli_stmt_bind_param($stmt, "ssss", $name, $phone, $email, $password);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         return true;
@@ -117,11 +119,11 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email, string $password): bool
     {
         $link = $this->connect();
         $sql = "UPDATE users
-                SET name = '$name', phone = '$phone', email = '$email'
+                SET name = '$name', phone = '$phone', email = '$email', password = '$password'
                 WHERE email = '$oldEmail'";
         $result = mysqli_query($link, $sql);
         if (!$result) {
