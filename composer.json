@@ -4,7 +4,9 @@
   "autoload": {
     "classmap": [
       "models/user",
-      "models/posts"
+      "models/posts",
+      "controllers/user",
+      "controllers/posts"
     ],
     "files": [
       "config.php"

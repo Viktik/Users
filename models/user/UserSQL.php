@@ -74,8 +74,10 @@ class UserSQL implements IUser
     public function getAllInfo()
     {
         $link = $this->connect();
-        $sql = "SELECT name, phone, email
-                FROM users";
+        $sql = "SELECT users.id, users.name, users.phone, users.email, COUNT(posts.user_id) as count
+                FROM users
+                LEFT OUTER JOIN posts on users.id = posts.user_id
+                GROUP BY (users.id)";
         $result = mysqli_query($link, $sql);
         if (!$result) {
             return false;
@@ -103,7 +105,7 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function delete(string $email): bool
+    public function deleteUser(string $email): bool
     {
         $link = $this->connect();
         $sql = "DELETE FROM users
@@ -115,7 +117,7 @@ class UserSQL implements IUser
         return true;
     }
 
-    public function update(string $oldEmail, string $name, string $phone, string $email): bool
+    public function updateUser(string $oldEmail, string $name, string $phone, string $email): bool
     {
         $link = $this->connect();
         $sql = "UPDATE users

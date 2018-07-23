@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-require 'controllers/user/webController.php';
+//require 'controllers/user/WebController.php';
 ?>
 
     <!DOCTYPE html>
@@ -8,10 +8,19 @@ require 'controllers/user/webController.php';
     <head>
         <title>Users</title>
         <meta charset="utf-8"/>
+        <style>
+            .leftstr, .rightstr {
+                float: left;
+                width: 50%;
+            }
+            .rightstr {
+                text-align: right;
+            }
+        </style>
     </head>
     <body>
 <?php
-$controller = new WebController($class);
+//$controller = new WebController($class);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim(strip_tags($_POST['email']));
@@ -57,23 +66,27 @@ if ($_GET['command'] == 'allinfo') {
         <th>Name</th>
         <th>Phone</th>
         <th>Email</th>
+        <th>Posts</th>
         <th>Action</th>
     </tr>
 <?
     foreach ($allInfo as $user) {
+
         ?>
         <tr>
             <td><?= $user['name']?></td>
             <td><?= $user['phone']?></td>
             <td><?= $user['email']?></td>
-            <td><a href="htmlForms/updateUser.php?email=<?=$user['email']?>">Изменить</a> / <a href="htmlForms/deleteUser.php?email=<?=$user['email']?>">Удалить</a> </td>
+            <td><a href="actions/posts/getByUserId.php?id=<?= $user['id']?>"><?= $user['count']?></a></td>
+            <td><a href="htmlForms/user/update.php?email=<?=$user['email']?>">Изменить</a> / <a href="htmlForms/user/delete.php?email=<?=$user['email']?>">Удалить</a> </td>
         </tr>
         <?
     }
     ?>
 </table>
     <br/>
-    <a href="htmlForms/newUserForm.html">Создать нового пользователя</a>
+    <p class="leftstr"><a href="htmlForms/user/new.html">Создать нового пользователя</a></p>
+    <p class="rightstr"><a href="allPosts.php">Список постов</a></p>
     <?
 }
 ?>
